@@ -1,0 +1,95 @@
+/* === Expansion Page — Railroad Tiles: Canals === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --card: #0f3460;
+  --accent: #c850c0;
+  --text: #eee;
+  --text-muted: #aab;
+  --success: #53d769;
+  --warning: #f5a623;
+  --radius: 10px;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container { max-width: 800px; margin: 0 auto; padding: 2rem 1.25rem; }
+
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.back-link:hover { text-decoration: underline; }
+
+.game-header { margin-bottom: 2rem; }
+.game-header h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+.game-header .meta { color: var(--text-muted); font-size: 0.95rem; }
+
+.cover-banner { margin-bottom: 1rem; }
+.cover-banner img { width: 100%; max-height: 260px; object-fit: cover; border-radius: var(--radius); }
+
+details {
+  background: var(--surface);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+summary {
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before { content: '▸ '; color: var(--accent); }
+details[open] > summary::before { content: '▾ '; }
+
+.section-body { padding: 0 1rem 1rem; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+}
+.card h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+.card p, .card ul { font-size: 0.9rem; color: var(--text-muted); }
+.card ul { padding-left: 1.2rem; }
+
+.tip, .warning {
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+.tip { background: rgba(83,215,105,0.1); border-left: 3px solid var(--success); }
+.warning { background: rgba(245,166,35,0.1); border-left: 3px solid var(--warning); }
+
+ol, ul { padding-left: 1.4rem; }
+li { margin-bottom: 0.3rem; font-size: 0.95rem; }
+
+@media (min-width: 500px) {
+  .card-grid { grid-template-columns: 1fr 1fr; }
+}

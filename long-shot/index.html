@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long Shot: The Dice Game — Rules Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← All Games</a>
+
+    <div class="game-header">
+      <div class="cover-banner">
+        <img src="cover.webp" alt="Long Shot: The Dice Game box cover">
+      </div>
+      <h1>🐴 Long Shot: The Dice Game</h1>
+      <p class="meta">1–8 players · ~25 min · Designer: Chris Handy · Perplext (2022)</p>
+
+      <!-- BGG STATS -->
+      <div class="bgg-stats">
+        <div class="bgg-stat">
+          <span class="bgg-value">7.5</span>
+          <span class="bgg-label">BGG Rating</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">1.94<small>/5</small></span>
+          <span class="bgg-label">Complexity</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">#360</span>
+          <span class="bgg-label">BGG Rank</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">4–5</span>
+          <span class="bgg-label">Best At</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- TOP 4 SECTIONS — the "grab and go" stuff     -->
+    <!-- ============================================ -->
+
+    <!-- 1. PLAYER AID CARD -->
+    <details open>
+      <summary>🃏 Player Aid Card</summary>
+      <div class="section-body">
+
+        <!-- DICE GRAPHIC -->
+        <div class="svg-diagram">
+          <svg viewBox="0 0 400 120" width="400" height="120" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,10 145,35 145,85 100,110 55,85 55,35" fill="#0f3460" stroke="#e94560" stroke-width="2"/>
+            <text x="100" y="55" text-anchor="middle" fill="#e94560" font-size="11" font-weight="bold" font-family="sans-serif">HORSE</text>
+            <text x="100" y="72" text-anchor="middle" fill="#eee" font-size="13" font-weight="bold" font-family="sans-serif">d8</text>
+            <text x="100" y="90" text-anchor="middle" fill="#aab" font-size="9" font-family="sans-serif">1–8</text>
+            <text x="175" y="65" text-anchor="middle" fill="#e94560" font-size="24" font-weight="bold" font-family="sans-serif">+</text>
+            <rect x="210" y="20" width="80" height="80" rx="12" fill="#0f3460" stroke="#53d769" stroke-width="2"/>
+            <text x="250" y="52" text-anchor="middle" fill="#53d769" font-size="11" font-weight="bold" font-family="sans-serif">MOVE</text>
+            <text x="250" y="70" text-anchor="middle" fill="#eee" font-size="13" font-weight="bold" font-family="sans-serif">d6</text>
+            <text x="250" y="88" text-anchor="middle" fill="#aab" font-size="9" font-family="sans-serif">1·2·2·2·3·3</text>
+          </svg>
+        </div>
+
+        <!-- TURN FLOW -->
+        <div class="flow-row">
+          <div class="flow-step highlight">🎲 Roll</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🐴 Move Horse</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">⛓ Secondary</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step highlight">👥 All Pick Action</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🔄 Pass Dice</div>
+        </div>
+
+        <p><strong>Each turn:</strong> Roll d8 + d6 → move horse → secondary moves (low→high) → ALL players pick 1 action.</p>
+        <p><strong>Actions (pick 1, tied to the horse rolled):</strong></p>
+        <table>
+          <tr><th>Action</th><th>Quick Ref</th></tr>
+          <tr><td>Concession</td><td>Mark matching # on 4×4 grid. Complete row/col → claim a bonus.</td></tr>
+          <tr><td>Helmet</td><td>Mark helmet for rolled horse. Allows betting past the no-bet line.</td></tr>
+          <tr><td>Jersey</td><td>Mark jersey for rolled horse + add X to its card (more secondary movement).</td></tr>
+          <tr><td>Bet</td><td>Bet up to $3 on rolled horse. Can increase existing bets.</td></tr>
+          <tr><td>Buy Horse</td><td>Pay price → gain ability + prize money if it places. Can't buy owned/finished horses.</td></tr>
+        </table>
+        <p><strong>Wild Horseshoes (×3):</strong> Spend one → use ANY horse # instead of rolled. Skip action → recover one.</p>
+        <p><strong>Movement die faces:</strong> 1 · 2 · 2 · 2 · 3 · 3</p>
+        <p><strong>Concession bonuses:</strong> $5/$7 · free $3 bet · free helmet/jersey · free horse · move horses fwd/back.</p>
+        <p><strong>Prize money (owner):</strong> 1st $35 · 2nd $25 · 3rd $15</p>
+        <p><strong>Helmet + Jersey pair:</strong> $5 each at end of game.</p>
+      </div>
+    </details>
+
+    <!-- 2. WINNING CONDITION / SCORING / OBJECTIVE -->
+    <details>
+      <summary>🏆 Winning Condition / Scoring / Objective</summary>
+      <div class="section-body">
+        <p>The game ends when <strong>3 horses cross the finish line</strong>. Finish the current turn, then score. Most money wins.</p>
+        <div class="score-flow">
+          <div class="score-box"><span class="score-icon">🐴</span>Own Horse<br><span class="score-label">$35/$25/$15</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">⛑🎽</span>H+J Pairs<br><span class="score-label">$5 each</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">💰</span>Bets × Odds<br><span class="score-label">per placer</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">↩️</span>Bets Back<br><span class="score-label">past line, no place</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">💵</span>Cash<br><span class="score-label">on hand</span></div>
+        </div>
+        <table>
+          <tr><th>Category</th><th>How</th></tr>
+          <tr><td>Own winning horse</td><td>1st = $35 · 2nd = $25 · 3rd = $15 (stacks if you own multiple)</td></tr>
+          <tr><td>Helmet + Jersey pairs</td><td>$5 per matching pair on any horse</td></tr>
+          <tr><td>Bets on placing horses</td><td>Bet amount × that horse's odds multiplier for its finishing position</td></tr>
+          <tr><td>Bets — past no-bet line</td><td>Get your bet back (×1) if the horse passed the red line but didn't place</td></tr>
+          <tr><td>Bets — before no-bet line</td><td>$0 — you lose the bet</td></tr>
+          <tr><td>Cash on hand</td><td>Add remaining balance</td></tr>
+        </table>
+        <p><strong>Tiebreaker:</strong> whoever owns the horse that placed highest wins.</p>
+        <div class="tip">
+          Lower-numbered horses have worse payout odds (they're favored to win). Horse #8 has the best payout — it's the long shot.
+        </div>
+      </div>
+    </details>
+
+    <!-- 3. QUICK SETUP -->
+    <details>
+      <summary>⚙️ Quick Setup</summary>
+      <div class="section-body">
+        <ol>
+          <li>Place racetrack board in center. Line up all 8 horses behind the starting line.</li>
+          <li>Choose a horse card set (Apple Core 🍎 or Gate 🚪, or mix) — lay all 8 cards face-up next to the track.</li>
+          <li>Give each player: 1 player board + 1 dry-erase marker.</li>
+          <li>Shuffle starting cards, deal 1 each. Mark the 4 concession numbers and 2 free bets shown on your card.</li>
+          <li>Everyone writes <strong>$12</strong> as starting cash.</li>
+          <li>Whoever most recently made a bet goes first and takes the dice.</li>
+        </ol>
+        <p style="margin-top:1rem"><strong>Example concession grid after setup</strong> (green = from starting card):</p>
+        <div class="concession-grid-visual">
+          <div class="cg-cell">3</div>
+          <div class="cg-cell start-marked">5</div>
+          <div class="cg-cell">2</div>
+          <div class="cg-cell">7</div>
+          <div class="cg-cell">1</div>
+          <div class="cg-cell">4</div>
+          <div class="cg-cell start-marked">8</div>
+          <div class="cg-cell">6</div>
+          <div class="cg-cell start-marked">1</div>
+          <div class="cg-cell">7</div>
+          <div class="cg-cell">3</div>
+          <div class="cg-cell">5</div>
+          <div class="cg-cell">6</div>
+          <div class="cg-cell">2</div>
+          <div class="cg-cell">4</div>
+          <div class="cg-cell start-marked">8</div>
+        </div>
+        <div class="tip">4 coins pre-marked from your starting card. Complete a row or column during the game to earn a bonus.</div>
+      </div>
+    </details>
+
+    <!-- 4. GOTCHA / COMMON MISTAKES -->
+    <details>
+      <summary>⚠️ Gotcha / Common Mistakes</summary>
+      <div class="section-body">
+        <div class="svg-diagram">
+          <svg viewBox="0 0 460 80" width="460" height="80" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="30" width="420" height="24" rx="4" fill="#16213e" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <line x1="48" y1="30" x2="48" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="76" y1="30" x2="76" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="104" y1="30" x2="104" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="132" y1="30" x2="132" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="160" y1="30" x2="160" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="188" y1="30" x2="188" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="216" y1="30" x2="216" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="244" y1="30" x2="244" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="272" y1="30" x2="272" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="300" y1="30" x2="300" y2="54" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="340" y1="22" x2="340" y2="62" stroke="#e94560" stroke-width="2.5" stroke-dasharray="4,3"/>
+            <text x="340" y="16" text-anchor="middle" fill="#e94560" font-size="9" font-weight="bold" font-family="sans-serif">NO-BET LINE</text>
+            <rect x="415" y="22" width="6" height="40" fill="#eee"/>
+            <rect x="415" y="22" width="3" height="5" fill="#333"/>
+            <rect x="418" y="27" width="3" height="5" fill="#333"/>
+            <rect x="415" y="32" width="3" height="5" fill="#333"/>
+            <rect x="418" y="37" width="3" height="5" fill="#333"/>
+            <rect x="415" y="42" width="3" height="5" fill="#333"/>
+            <rect x="418" y="47" width="3" height="5" fill="#333"/>
+            <rect x="415" y="52" width="3" height="5" fill="#333"/>
+            <rect x="418" y="57" width="3" height="5" fill="#333"/>
+            <text x="418" y="16" text-anchor="middle" fill="#eee" font-size="9" font-weight="bold" font-family="sans-serif">FINISH</text>
+            <circle cx="62" cy="42" r="8" fill="#e94560" stroke="#fff" stroke-width="1.5"/>
+            <text x="62" y="46" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="sans-serif">3</text>
+            <circle cx="370" cy="42" r="8" fill="#f5a623" stroke="#fff" stroke-width="1.5"/>
+            <text x="370" y="46" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="sans-serif">5</text>
+            <text x="30" y="74" fill="#aab" font-size="8" font-family="sans-serif">START</text>
+            <text x="350" y="74" fill="#f5a623" font-size="8" font-family="sans-serif">🔒 need helmet to bet</text>
+          </svg>
+        </div>
+        <p><strong>Concession moves can't finish a horse.</strong><br>
+        A "move ahead" concession bonus can never push a horse across the finish line. Stop it just before. You also can't move a horse backward past the finish line.</p>
+        <p><strong>No betting past the no-bet line — unless you have the helmet.</strong><br>
+        Once a horse crosses the red line, you can only bet on it if you marked its helmet.</p>
+        <p><strong>3rd horse finishes mid-turn? Keep going.</strong><br>
+        Finish the current turn so all players get their action. But no more horses can cross the finish line — they stop just before it.</p>
+        <p><strong>Can't buy owned or finished horses.</strong><br>
+        If someone already owns it or it crossed the finish line, it's off the market.</p>
+        <p><strong>Bets on horses that didn't reach the no-bet line = $0.</strong><br>
+        That money is gone. Horses past the line but not placing get your bet back (×1).</p>
+        <p><strong>Diagonals don't count on the concession grid.</strong><br>
+        Only completed rows and columns earn bonuses.</p>
+        <p><strong>Secondary movement resolves low → high.</strong><br>
+        Always resolve horse #1 first, then #2, etc. This order can matter.</p>
+        <p><strong>Secondary movement CAN finish a horse.</strong><br>
+        Card X's (secondary movement) can send a horse across the line. Only concession bonuses can't.</p>
+        <p><strong>Actions resolve in clockwise order from the roller.</strong><br>
+        Turn order matters — especially near the end of the race.</p>
+      </div>
+    </details>
+
+    <!-- ============================================ -->
+    <!-- DETAILED REFERENCE                           -->
+    <!-- ============================================ -->
+
+    <details>
+      <summary>Turn Structure (detailed)</summary>
+      <div class="section-body">
+        <ol>
+          <li><strong>Roll dice</strong> — active player rolls the d8 (horse) + d6 (movement, faces: 1-2-2-2-3-3).</li>
+          <li><strong>Move primary horse</strong> — the horse matching the d8 moves the number of spaces on the d6.</li>
+          <li><strong>Secondary movement</strong> — check that horse's card for X marks. Each marked horse moves exactly 1 space. Resolve low → high.</li>
+          <li><strong>All players take 1 action</strong> — in clockwise order from the active player. The action is tied to the horse number rolled.</li>
+          <li><strong>Pass dice</strong> — next player clockwise becomes active.</li>
+        </ol>
+      </div>
+    </details>
+
+    <details>
+      <summary>Actions (detailed)</summary>
+      <div class="section-body">
+        <p>Your action always relates to the horse number rolled on the d8.</p>
+        <table>
+          <tr><th>Action</th><th>What You Do</th></tr>
+          <tr><td>Concession</td><td>Mark a matching number on your 4×4 grid. Completing a row or column earns a bonus (money, free bet, move horses, free helmet/jersey/horse).</td></tr>
+          <tr><td>Helmet</td><td>Mark the helmet for the rolled horse. Lets you bet on it even after it passes the no-bet line.</td></tr>
+          <tr><td>Jersey</td><td>Mark the jersey for the rolled horse AND add an X to that horse's card (more secondary movement).</td></tr>
+          <tr><td>Bet</td><td>Bet up to $3 on the rolled horse. Subtract from your cash. Can increase existing bets.</td></tr>
+          <tr><td>Buy Horse</td><td>Pay the price to own the rolled horse. Gain its special ability + prize money if it places top 3. Can't buy owned or finished horses.</td></tr>
+        </table>
+        <div class="tip">
+          <strong>Wild Horseshoes (×3):</strong> Spend one to use ANY horse number instead of what was rolled. You can skip your action to recover a spent horseshoe.
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Concession Bonuses (detailed)</summary>
+      <div class="section-body">
+        <p>When you complete a row or column in your 4×4 concession grid, pick one unclaimed bonus:</p>
+        <ul>
+          <li>Gain money ($5 or $7)</li>
+          <li>Free $3 bet on any horse (doesn't cost cash)</li>
+          <li>Get any horse's helmet or jersey for free</li>
+          <li>Buy any available horse for free</li>
+          <li>Move one or two horses forward or backward a number of spaces</li>
+        </ul>
+        <div class="warning">
+          <strong>Important:</strong> A concession "move ahead" bonus can NEVER send a horse across the finish line. Move it to just before the line at most. You also can't move a horse backward past the finish line.
+        </div>
+        <p>If you complete multiple rows/columns at once, you claim multiple bonuses. Diagonals don't count.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Horse Powers — Apple Core Set 🍎</summary>
+      <div class="section-body">
+        <table>
+          <tr><th>#</th><th>Name</th><th>Ability</th></tr>
+          <tr><td>1</td><td>Chain Reaction</td><td>Mark any concession coin when you complete a vertical column.</td></tr>
+          <tr><td>2</td><td>Too Lucky</td><td>Earn $2 whenever she's rolled.</td></tr>
+          <tr><td>3</td><td>Scatter Shot</td><td>Concession action: mark a coin ±1 from the rolled number.</td></tr>
+          <tr><td>4</td><td>Early Bird Special</td><td>First bet on a horse is free (don't subtract cash).</td></tr>
+          <tr><td>5</td><td>Charley Horse</td><td>Move any horse back 1 space when you complete a horizontal row.</td></tr>
+          <tr><td>6</td><td>Miracle Worker</td><td>When bought: mark any concession coin, helmet, or jersey.</td></tr>
+          <tr><td>7</td><td>Better Safe than Sorry</td><td>End of game: +$2 for every horse you bet on (placed or not).</td></tr>
+          <tr><td>8</td><td>Nitro Nellie</td><td>Move a horse ahead 1 spot whenever you buy a helmet.</td></tr>
+        </table>
+      </div>
+    </details>
+
+    <details>
+      <summary>Horse Powers — Gate Set 🚪</summary>
+      <div class="section-body">
+        <table>
+          <tr><th>#</th><th>Name</th><th>Ability</th></tr>
+          <tr><td>1</td><td>Row Your Boat</td><td>Earn $2 when you complete a horizontal concession row.</td></tr>
+          <tr><td>2</td><td>Make it Rain</td><td>When bought: free $1 bet on all even OR all odd horses.</td></tr>
+          <tr><td>3</td><td>Cook the Books</td><td>Free $1 bet on any horse whenever you take the bet action.</td></tr>
+          <tr><td>4</td><td>Mint Condition</td><td>When you buy a helmet: bet up to $2 on the rolled horse.</td></tr>
+          <tr><td>5</td><td>Bottom Dollar</td><td>End of game: recoup bets on horses that didn't pass the no-bet line.</td></tr>
+          <tr><td>6</td><td>Dirty Laundry</td><td>Jersey action: buy the jersey for any horse you've bet on.</td></tr>
+          <tr><td>7</td><td>Cheer Up Buttercup</td><td>When you bet on the rolled horse: move it ahead 3 if it's in last (or tied for last).</td></tr>
+          <tr><td>8</td><td>Donut Dollie</td><td>Concession move bonuses get +1 extra space.</td></tr>
+        </table>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>

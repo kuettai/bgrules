@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village Pillage — Rules Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← All Games</a>
+
+    <div class="game-header">
+      <div class="cover-banner">
+        <img src="cover.webp" alt="Village Pillage box cover">
+      </div>
+      <h1>🥕 Village Pillage</h1>
+      <p class="meta">2–5 players · ~20 min · Designers: Peter C. Hayward &amp; Tom Lang · Jellybean Games (2019)</p>
+
+      <!-- BGG STATS -->
+      <div class="bgg-stats">
+        <div class="bgg-stat">
+          <span class="bgg-value">6.8</span>
+          <span class="bgg-label">BGG Rating</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">1.29<small>/5</small></span>
+          <span class="bgg-label">Complexity</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">#5k+</span>
+          <span class="bgg-label">BGG Rank</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">3–4</span>
+          <span class="bgg-label">Best At</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPANSION NAV -->
+    <div class="expansion-nav">
+      <span class="expansion-nav-label">📦 Expansions</span>
+      <div class="expansion-pills">
+        <a href="expansions/surf-and-turf/index.html" class="expansion-pill">🏄 Surf &amp; Turf</a>
+        <a href="expansions/robbin-hood/index.html" class="expansion-pill">🏹 Robbin' Hood</a>
+        <a href="expansions/dark-arts-and-crafts/index.html" class="expansion-pill">🎃 Dark Arts</a>
+        <a href="expansions/6th-player/index.html" class="expansion-pill">👥 6th Player</a>
+        <a href="expansions/festivals/index.html" class="expansion-pill">🎪 Festivals</a>
+        <a href="expansions/cultists/index.html" class="expansion-pill">🕯️ Cultists</a>
+        <a href="expansions/feelings/index.html" class="expansion-pill">💜 Feelings</a>
+      </div>
+    </div>
+
+    <!-- 1. PLAYER AID CARD -->
+    <details open>
+      <summary>🃏 Player Aid Card</summary>
+      <div class="section-body">
+
+        <!-- TURN FLOW -->
+        <div class="flow-row">
+          <div class="flow-step highlight">🤫 Plan</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🔄 Reveal</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">⚔️ Resolve</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step highlight">🔁 Refresh</div>
+        </div>
+
+        <p><strong>Plan:</strong> Simultaneously pick 2 cards from your hand — play 1 face-down toward each neighbor.</p>
+        <p><strong>Reveal:</strong> All players flip their cards face-up at the same time.</p>
+        <p><strong>Resolve:</strong> Resolve all matchups in strict order:</p>
+
+        <!-- RESOLVE ORDER DIAGRAM -->
+        <div class="svg-diagram">
+          <svg viewBox="0 0 440 60" width="440" height="60" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="90" height="40" rx="8" fill="#0f3460" stroke="#53d769" stroke-width="2"/>
+            <text x="55" y="35" text-anchor="middle" fill="#53d769" font-size="13" font-weight="bold" font-family="sans-serif">1. Farmer</text>
+            <text x="120" y="35" text-anchor="middle" fill="#c850c0" font-size="18" font-weight="bold" font-family="sans-serif">→</text>
+            <rect x="135" y="10" width="75" height="40" rx="8" fill="#0f3460" stroke="#4fc3f7" stroke-width="2"/>
+            <text x="172" y="35" text-anchor="middle" fill="#4fc3f7" font-size="13" font-weight="bold" font-family="sans-serif">2. Wall</text>
+            <text x="228" y="35" text-anchor="middle" fill="#c850c0" font-size="18" font-weight="bold" font-family="sans-serif">→</text>
+            <rect x="243" y="10" width="85" height="40" rx="8" fill="#0f3460" stroke="#e94560" stroke-width="2"/>
+            <text x="285" y="35" text-anchor="middle" fill="#e94560" font-size="13" font-weight="bold" font-family="sans-serif">3. Raider</text>
+            <text x="345" y="35" text-anchor="middle" fill="#c850c0" font-size="18" font-weight="bold" font-family="sans-serif">→</text>
+            <rect x="355" y="10" width="80" height="40" rx="8" fill="#0f3460" stroke="#f5a623" stroke-width="2"/>
+            <text x="395" y="35" text-anchor="middle" fill="#f5a623" font-size="13" font-weight="bold" font-family="sans-serif">4. Merchant</text>
+          </svg>
+        </div>
+
+        <p><strong>Refresh:</strong> Pick up all played cards back into your hand. Start a new round.</p>
+
+        <div class="tip">
+          <strong>Negotiation is encouraged!</strong> Talk, bluff, threaten, and make deals with your neighbors — but all agreements are non-binding.
+        </div>
+
+        <p><strong>Quick card matchup reference (starting cards):</strong></p>
+        <table>
+          <tr><th>Your Card</th><th>vs Farmer</th><th>vs Wall</th><th>vs Raider</th><th>vs Merchant</th></tr>
+          <tr><td>🌾 Farmer</td><td>Gain 3</td><td>Gain 3</td><td>Gain 3 (they steal 4)</td><td>Gain 3</td></tr>
+          <tr><td>🧱 Wall</td><td>Gain 1, Bank 1</td><td>Gain 1, Bank 1</td><td>Steal 1, Bank 1</td><td>Gain 1, Bank 1</td></tr>
+          <tr><td>⚔️ Raider</td><td>Steal 4</td><td>—</td><td>—</td><td>Steal 4</td></tr>
+          <tr><td>🛒 Merchant</td><td>Buy Relic / Buy Card</td><td>Buy Relic / Buy Card</td><td>—</td><td>Buy Relic / Buy Card</td></tr>
+        </table>
+
+        <div class="warning">
+          <strong>Resolve order within each type:</strong> Gain → Bank → Steal → Skip → Buy Relic → Buy Card. Cards with the same effect resolve simultaneously.
+        </div>
+      </div>
+    </details>
+
+    <!-- 2. WINNING CONDITION -->
+    <details>
+      <summary>🏆 Winning Condition</summary>
+      <div class="section-body">
+        <p>First player to collect <strong>3 Royal Relics</strong> wins and becomes ruler of the Turnip Kingdom!</p>
+
+        <div class="relic-flow">
+          <div class="relic-box">
+            <span class="relic-icon">🏅</span>
+            <span class="relic-cost">8 turnips</span>
+            <span class="relic-label">Scepter (1st)</span>
+          </div>
+          <span class="relic-arrow">→</span>
+          <div class="relic-box">
+            <span class="relic-icon">👑</span>
+            <span class="relic-cost">9 turnips</span>
+            <span class="relic-label">Crown (2nd)</span>
+          </div>
+          <span class="relic-arrow">→</span>
+          <div class="relic-box">
+            <span class="relic-icon">🪑</span>
+            <span class="relic-cost">10 turnips</span>
+            <span class="relic-label">Throne (3rd)</span>
+          </div>
+        </div>
+
+        <p>Relics <strong>must be purchased in order</strong> (Scepter → Crown → Throne) using a Merchant card.</p>
+        <p>Turnips can be spent from both your <strong>Stockpile</strong> and your <strong>Bank</strong>.</p>
+
+        <div class="warning">
+          <strong>If you can afford a relic when you play a Merchant, you MUST buy it.</strong> You only use the Merchant's alternate effect (buy a market card) if you can't afford the next relic.
+        </div>
+
+        <p><strong>Tiebreaker:</strong> If multiple players get their 3rd relic in the same round, the player with the most turnips remaining wins. Then most cards in hand.</p>
+      </div>
+    </details>
+
+    <!-- 3. QUICK SETUP -->
+    <details>
+      <summary>⚙️ Quick Setup</summary>
+      <div class="section-body">
+        <ol>
+          <li>Each player takes <strong>4 starting cards</strong> (marked with ✱): Farmer, Wall, Raider, Merchant.</li>
+          <li>Each player takes a <strong>Bank card</strong> (use "Duel" side for 2 players).</li>
+          <li>Each player takes <strong>2 turnip tokens</strong>: 1 on the Bank card, 1 in their Stockpile.</li>
+          <li>Place all <strong>Relic tokens</strong> and remaining <strong>Turnip tokens</strong> in a central Supply.</li>
+          <li>Shuffle the <strong>20 Market cards</strong> face-down. Reveal the top 4 as the Market row.</li>
+          <li>Seat players in a circle — you only interact with your immediate neighbors.</li>
+        </ol>
+
+        <!-- SETUP DIAGRAM -->
+        <div class="svg-diagram">
+          <svg viewBox="0 0 400 160" width="400" height="160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Player area -->
+            <rect x="20" y="10" width="160" height="140" rx="10" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="100" y="30" text-anchor="middle" fill="#aab" font-size="10" font-family="sans-serif">YOUR AREA</text>
+            <!-- Hand -->
+            <rect x="30" y="40" width="32" height="44" rx="4" fill="#0f3460" stroke="#53d769" stroke-width="1.5"/>
+            <text x="46" y="66" text-anchor="middle" fill="#53d769" font-size="8" font-weight="bold" font-family="sans-serif">F</text>
+            <rect x="66" y="40" width="32" height="44" rx="4" fill="#0f3460" stroke="#4fc3f7" stroke-width="1.5"/>
+            <text x="82" y="66" text-anchor="middle" fill="#4fc3f7" font-size="8" font-weight="bold" font-family="sans-serif">W</text>
+            <rect x="102" y="40" width="32" height="44" rx="4" fill="#0f3460" stroke="#e94560" stroke-width="1.5"/>
+            <text x="118" y="66" text-anchor="middle" fill="#e94560" font-size="8" font-weight="bold" font-family="sans-serif">R</text>
+            <rect x="138" y="40" width="32" height="44" rx="4" fill="#0f3460" stroke="#f5a623" stroke-width="1.5"/>
+            <text x="154" y="66" text-anchor="middle" fill="#f5a623" font-size="8" font-weight="bold" font-family="sans-serif">M</text>
+            <text x="100" y="100" text-anchor="middle" fill="#aab" font-size="9" font-family="sans-serif">4 starting cards</text>
+            <!-- Bank -->
+            <rect x="40" y="110" width="50" height="30" rx="4" fill="#16213e" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <text x="65" y="129" text-anchor="middle" fill="#aab" font-size="8" font-family="sans-serif">Bank</text>
+            <circle cx="55" cy="125" r="6" fill="#c850c0"/>
+            <text x="55" y="128" text-anchor="middle" fill="#fff" font-size="7" font-weight="bold" font-family="sans-serif">1</text>
+            <!-- Stockpile -->
+            <circle cx="130" cy="125" r="8" fill="#c850c0" stroke="#fff" stroke-width="1"/>
+            <text x="130" y="128" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold" font-family="sans-serif">1</text>
+            <text x="130" y="143" text-anchor="middle" fill="#aab" font-size="7" font-family="sans-serif">Stockpile</text>
+            <!-- Market -->
+            <rect x="220" y="10" width="170" height="80" rx="10" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="305" y="28" text-anchor="middle" fill="#aab" font-size="10" font-family="sans-serif">MARKET (4 face-up)</text>
+            <rect x="230" y="38" width="28" height="40" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="264" y="38" width="28" height="40" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="298" y="38" width="28" height="40" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="332" y="38" width="28" height="40" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <!-- Supply -->
+            <rect x="220" y="100" width="170" height="50" rx="10" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="305" y="118" text-anchor="middle" fill="#aab" font-size="10" font-family="sans-serif">SUPPLY</text>
+            <circle cx="260" cy="135" r="7" fill="#c850c0"/>
+            <text x="260" y="138" text-anchor="middle" fill="#fff" font-size="7" font-family="sans-serif">🥕</text>
+            <text x="300" y="138" text-anchor="middle" fill="#f5a623" font-size="9" font-family="sans-serif">🏅👑🪑</text>
+            <text x="345" y="138" text-anchor="middle" fill="#aab" font-size="8" font-family="sans-serif">Relics</text>
+          </svg>
+        </div>
+
+        <div class="tip">
+          <strong>2-Player Duel:</strong> Flip the Bank card to the "Duel" side (only 4 bank spaces, cheaper relics). Play 2 cards: one for "now" and one for "later" — the front card resolves this turn, the back card next turn.
+        </div>
+      </div>
+    </details>
+
+    <!-- 4. GOTCHA / COMMON MISTAKES -->
+    <details>
+      <summary>⚠️ Gotcha / Common Mistakes</summary>
+      <div class="section-body">
+        <p><strong>Merchant MUST buy a relic if you can afford it.</strong><br>
+        You don't get to choose — if you have enough turnips for your next relic when your Merchant resolves, you must purchase it. The "buy a card" option is only available when you can't afford a relic.</p>
+
+        <p><strong>Relics must be bought in order.</strong><br>
+        Scepter (8) → Crown (9) → Throne (10). You can't skip ahead or buy out of sequence.</p>
+
+        <p><strong>Stolen turnips come from the Stockpile only.</strong><br>
+        Raiders steal from your neighbor's Stockpile (the loose turnips), NOT from their Bank — unless a card specifically says otherwise.</p>
+
+        <p><strong>Banked turnips are safe (usually).</strong><br>
+        Turnips on your Bank card can't be stolen by normal Raiders. Only certain Market cards can steal from the Bank.</p>
+
+        <p><strong>You can spend Bank turnips to buy things.</strong><br>
+        When buying relics or market cards, you can pay from both your Stockpile and your Bank.</p>
+
+        <p><strong>You only interact with your immediate neighbors.</strong><br>
+        In a 4–5 player game, you cannot affect players who aren't sitting next to you. This is by design.</p>
+
+        <p><strong>Cards go back to your hand every round.</strong><br>
+        Unlike a deck-builder, you always have access to all your cards. New market cards are immediately available next round.</p>
+
+        <div class="warning">
+          <strong>Skipped cards stay out for a round.</strong> Some Market cards can "skip" an opponent's card. That card stays face-up and can't be used next round — it returns to hand the round after.
+        </div>
+
+        <p><strong>Market cards are limited.</strong><br>
+        Once the Market deck runs out, no more cards can be purchased. Refill the Market row only when a card is bought.</p>
+
+        <p><strong>Same card types can be played to both neighbors.</strong><br>
+        You can play Farmer left AND Farmer right if you want — you're not forced to play different cards.</p>
+
+        <div class="tip">
+          <strong>Sitting next to a weak player is a huge advantage.</strong> Since you only fight neighbors, the "kingmaker" problem is real in 4–5 player games. Try to balance seating if possible.
+        </div>
+      </div>
+    </details>
+
+    <!-- 5. CARD TYPES & INTERACTIONS -->
+    <details>
+      <summary>🃏 Card Types &amp; Interactions</summary>
+      <div class="section-body">
+        <p>Every card belongs to one of 4 types. Starting cards are marked with ✱. Market cards are upgraded versions with unique names and stronger effects.</p>
+
+        <h3 style="color: #53d769; margin: 1rem 0 0.5rem;">🌾 Farmers (resolve 1st)</h3>
+        <p>Gain turnips from the Supply. Vulnerable to Raiders.</p>
+        <table>
+          <tr><th>Card</th><th>Effect</th></tr>
+          <tr><td>Farmer ✱</td><td>Gain 3 turnips from Supply (regardless of opponent's card)</td></tr>
+          <tr><td>Mason (Market)</td><td>Gain 2 from Supply. vs Wall: steal 2 from opponent instead</td></tr>
+          <tr><td>Other Farmer upgrades</td><td>Gain more turnips or have bonus effects vs specific card types</td></tr>
+        </table>
+
+        <h3 style="color: #4fc3f7; margin: 1rem 0 0.5rem;">🧱 Walls (resolve 2nd)</h3>
+        <p>Protect your turnips and bank them safely. Counter Raiders.</p>
+        <table>
+          <tr><th>Card</th><th>Effect</th></tr>
+          <tr><td>Wall ✱</td><td>Gain 1, Bank 1. vs Raider: Steal 1 from attacker, Bank 1</td></tr>
+          <tr><td>Market Walls</td><td>Bank more turnips, stronger counter-steal vs Raiders</td></tr>
+        </table>
+
+        <h3 style="color: #e94560; margin: 1rem 0 0.5rem;">⚔️ Raiders (resolve 3rd)</h3>
+        <p>Steal turnips from neighbors. Blocked by Walls.</p>
+        <table>
+          <tr><th>Card</th><th>Effect</th></tr>
+          <tr><td>Raider ✱</td><td>vs Farmer/Merchant: Steal 4. vs Wall/Raider: nothing</td></tr>
+          <tr><td>Burglar (Market)</td><td>Can steal from the opponent's Bank (not just Stockpile)</td></tr>
+          <tr><td>Other Raider upgrades</td><td>Steal more, skip opponent's card, or have effects vs Walls</td></tr>
+        </table>
+
+        <h3 style="color: #f5a623; margin: 1rem 0 0.5rem;">🛒 Merchants (resolve 4th)</h3>
+        <p>Buy relics to win, or buy market cards to upgrade your hand. Most vulnerable card type.</p>
+        <table>
+          <tr><th>Card</th><th>Effect</th></tr>
+          <tr><td>Merchant ✱</td><td>Buy Relic (if affordable, mandatory). Otherwise: buy 1 Market card</td></tr>
+          <tr><td>Market Merchants</td><td>May have alternate buy effects, cheaper purchases, or bonus turnip generation</td></tr>
+        </table>
+
+        <div class="tip">
+          <strong>Strategy:</strong> The Merchant is the only way to win, but it's defenseless against Raiders. Time your Merchant plays carefully — play it when you think your neighbor will Farm or Wall.
+        </div>
+      </div>
+    </details>
+
+    <!-- 6. THE BANK -->
+    <details>
+      <summary>🏦 The Bank</summary>
+      <div class="section-body">
+        <p>Each player has a Bank card that safely stores turnips away from Raiders.</p>
+        <ul>
+          <li><strong>3+ players:</strong> Bank holds up to <strong>5 turnips</strong></li>
+          <li><strong>2 players (Duel):</strong> Bank holds up to <strong>4 turnips</strong></li>
+        </ul>
+        <p>Turnips in the Bank <strong>cannot be stolen</strong> by normal Raiders — only by specific Market cards (like the Burglar).</p>
+        <p>You <strong>can spend</strong> Bank turnips when buying relics or market cards.</p>
+
+        <div class="warning">
+          <strong>Banking is done via card effects only.</strong> You can't just move turnips into your Bank whenever you want — you need a Wall or similar card effect that says "Bank."
+        </div>
+
+        <p>The Bank card also shows the <strong>resolve order</strong> (Farmer → Wall → Raider → Merchant) as a handy reminder.</p>
+      </div>
+    </details>
+
+    <!-- 7. 2-PLAYER DUEL VARIANT -->
+    <details>
+      <summary>⚔️ 2-Player Duel Rules</summary>
+      <div class="section-body">
+        <p>The 2-player game uses modified rules to add a programming element:</p>
+        <ol>
+          <li>Flip Bank cards to the <strong>"Duel" side</strong> (4 bank spaces, cheaper relics).</li>
+          <li>Each turn, play <strong>2 cards</strong> against your opponent — one in front ("now") and one behind ("later").</li>
+          <li>Only the <strong>front card</strong> is revealed and resolved each round.</li>
+          <li>The back card slides forward to become next round's front card, and you add a new card behind it.</li>
+        </ol>
+
+        <p><strong>Duel Relic Costs:</strong></p>
+        <div class="relic-flow">
+          <div class="relic-box">
+            <span class="relic-icon">🏅</span>
+            <span class="relic-cost">6 turnips</span>
+            <span class="relic-label">Scepter</span>
+          </div>
+          <span class="relic-arrow">→</span>
+          <div class="relic-box">
+            <span class="relic-icon">👑</span>
+            <span class="relic-cost">7 turnips</span>
+            <span class="relic-label">Crown</span>
+          </div>
+          <span class="relic-arrow">→</span>
+          <div class="relic-box">
+            <span class="relic-icon">🪑</span>
+            <span class="relic-cost">8 turnips</span>
+            <span class="relic-label">Throne</span>
+          </div>
+        </div>
+
+        <div class="tip">
+          <strong>The programming twist makes 2-player games more strategic</strong> — you're committing to a card one turn in advance, so reading your opponent becomes even more important.
+        </div>
+      </div>
+    </details>
+
+    <!-- 8. STRATEGY TIPS -->
+    <details>
+      <summary>💡 Strategy Tips</summary>
+      <div class="section-body">
+        <ul>
+          <li><strong>Buy market cards early.</strong> More cards = more options = harder to predict. The market is limited, so don't wait.</li>
+          <li><strong>Bank aggressively.</strong> Banked turnips are safe from most theft. A full bank (5 turnips) plus a few in your stockpile can buy a relic in one shot.</li>
+          <li><strong>Watch your neighbor's turnip count.</strong> A player sitting on a pile of turnips is likely to play a Merchant — raid them!</li>
+          <li><strong>The Merchant is a gamble.</strong> It's the only path to victory but leaves you completely vulnerable to Raiders. Time it when your neighbor is likely to Farm or Wall.</li>
+          <li><strong>Don't be predictable.</strong> If you always Farm, your neighbors will always Raid you. Mix it up.</li>
+          <li><strong>Pay attention to what cards your neighbors have bought.</strong> Knowing their hand helps you predict their plays.</li>
+          <li><strong>In 4–5 player games, make deals.</strong> "I'll go easy on you if you attack the leader" — just remember, deals aren't binding!</li>
+        </ul>
+
+        <div class="tip">
+          <strong>The game is self-balancing:</strong> Players with fewer turnips get to pick first from the market when buying cards. Leading players become targets for their neighbors.
+        </div>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --card: #0f3460;
+  --accent: #e94560;
+  --text: #eee;
+  --text-muted: #aab;
+  --success: #53d769;
+  --warning: #f5a623;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container { max-width: 800px; margin: 0 auto; padding: 1rem; }
+
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cover-banner { text-align: center; margin-bottom: 1rem; }
+.cover-banner img { max-width: 100%; border-radius: 12px; max-height: 300px; object-fit: cover; }
+
+h1 { font-size: 1.8rem; margin-bottom: .25rem; }
+.meta { color: var(--text-muted); margin-bottom: 1.5rem; font-size: .9rem; }
+
+details {
+  background: var(--surface);
+  border-radius: 10px;
+  margin-bottom: .75rem;
+  border: 1px solid var(--card);
+}
+
+summary {
+  padding: .75rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  list-style: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: " ▸"; float: right; transition: transform .2s; }
+details[open] > summary::after { transform: rotate(90deg); }
+
+.section-body { padding: 0 1rem 1rem; }
+.section-body ul { padding-left: 1.25rem; }
+.section-body li { margin-bottom: .35rem; }
+.section-body h3 { color: var(--accent); margin: .75rem 0 .35rem; font-size: 1rem; }
+
+.tip, .warning {
+  border-radius: 8px;
+  padding: .65rem .85rem;
+  margin: .65rem 0;
+  font-size: .9rem;
+}
+.tip { background: rgba(83,215,105,.12); border-left: 3px solid var(--success); }
+.warning { background: rgba(245,166,35,.12); border-left: 3px solid var(--warning); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .5rem 0;
+  font-size: .9rem;
+}
+th, td { padding: .4rem .6rem; text-align: left; border-bottom: 1px solid var(--card); }
+th { color: var(--accent); font-size: .85rem; text-transform: uppercase; }

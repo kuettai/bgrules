@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board Game Rules</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 Board Game Rules</h1>
+    <p class="subtitle">Quick references, FAQs, and player aids for the table.</p>
+
+    <div class="toolbar">
+      <input type="text" id="search" class="search-input" placeholder="🔍 Search games…" autocomplete="off">
+      <div class="sort-pills">
+        <button class="sort-pill active" data-sort="name">Name</button>
+        <button class="sort-pill" data-sort="rating">Rating</button>
+        <button class="sort-pill" data-sort="weight">Weight</button>
+      </div>
+    </div>
+
+    <div class="game-list">
+      <a href="long-shot/index.html" class="game-card">
+        <img src="long-shot/cover.webp" alt="Long Shot cover" class="game-thumb">
+        <div class="game-info">
+          <span class="game-title">Long Shot: The Dice Game</span>
+          <span class="game-meta">1-8 players · ~25 min · Roll &amp; Write</span>
+          <span class="game-meta">⭐ 7.5 · Weight 1.94/5 · BGG #360</span>
+        </div>
+      </a>
+      <a href="harmonies/index.html" class="game-card">
+        <img src="harmonies/cover.webp" alt="Harmonies cover" class="game-thumb">
+        <div class="game-info">
+          <span class="game-title">Harmonies</span>
+          <span class="game-meta">1–4 players · 30–45 min · Pattern Building</span>
+          <span class="game-meta">⭐ 7.5 · Weight 2.0/5 · BGG ~#150</span>
+        </div>
+      </a>
+      <a href="welcome-to/index.html" class="game-card">
+        <img src="welcome-to/cover.webp" alt="Welcome To… cover" class="game-thumb">
+        <div class="game-info">
+          <span class="game-title">Welcome To…</span>
+          <span class="game-meta">1-100 players · ~25 min · Flip &amp; Write</span>
+          <span class="game-meta">⭐ 7.5 · Weight 1.84/5 · BGG ~#190</span>
+        </div>
+      </a>
+      <a href="village-pillage/index.html" class="game-card">
+        <img src="village-pillage/cover.webp" alt="Village Pillage cover" class="game-thumb">
+        <div class="game-info">
+          <span class="game-title">Village Pillage</span>
+          <span class="game-meta">2-5 players · ~20 min · Card Game</span>
+          <span class="game-meta">⭐ 6.8 · Weight 1.29/5 · BGG #5k+</span>
+        </div>
+      </a>
+      <a href="railroad-tiles/index.html" class="game-card">
+        <img src="railroad-tiles/cover.webp" alt="Railroad Tiles cover" class="game-thumb">
+        <div class="game-info">
+          <span class="game-title">Railroad Tiles</span>
+          <span class="game-meta">1–4 players · ~30–45 min · Tile Placement</span>
+          <span class="game-meta">⭐ 7.9 · Weight 2.0/5 · BGG N/A</span>
+        </div>
+      </a>
+      <a href="march-of-the-ants/index.html" class="game-card">
+        <img src="march-of-the-ants/cover.webp" alt="March of the Ants cover" class="game-thumb">
+        <div class="game-info">
+          <span class="game-title">March of the Ants: Evolved Edition</span>
+          <span class="game-meta">1–5 players · 60–90 min · Strategy / Area Control</span>
+          <span class="game-meta">⭐ 7.9 · Weight 2.8/5 · BGG N/A</span>
+        </div>
+      </a>
+      <a href="deep-regrets/index.html" class="game-card">
+        <img src="deep-regrets/cover.webp" alt="Deep Regrets cover" class="game-thumb">
+        <div class="game-info">
+          <span class="game-title">Deep Regrets</span>
+          <span class="game-meta">1–5 players · 30 min/player · Horror Fishing</span>
+          <span class="game-meta">⭐ 7.8 · Weight 2.3/5 · BGG N/A</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <script>
+  (function(){
+    const list = document.querySelector('.game-list');
+    const cards = [...list.querySelectorAll('.game-card')];
+    const search = document.getElementById('search');
+    const pills = document.querySelectorAll('.sort-pill');
+    let sortKey = 'name', sortAsc = true;
+
+    function parse(card){
+      const title = card.querySelector('.game-title').textContent;
+      const metas = card.querySelectorAll('.game-meta');
+      const stats = metas[1]?.textContent || '';
+      const rating = parseFloat(stats.match(/⭐\s*([\d.]+)/)?.[1]) || 0;
+      const weight = parseFloat(stats.match(/Weight\s*([\d.]+)/)?.[1]) || 0;
+      return {el:card, title, rating, weight, text:(title+' '+metas[0]?.textContent+' '+stats).toLowerCase()};
+    }
+
+    const data = cards.map(parse);
+
+    function render(){
+      const q = search.value.toLowerCase().trim();
+      const filtered = q ? data.filter(d=>d.text.includes(q)) : data;
+      filtered.sort((a,b)=>{
+        let v = sortKey==='name' ? a.title.localeCompare(b.title) : (a[sortKey]-b[sortKey]);
+        return sortAsc ? v : -v;
+      });
+      list.innerHTML = '';
+      if(!filtered.length){
+        list.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:2rem">No games found.</p>';
+        return;
+      }
+      filtered.forEach(d=>list.appendChild(d.el));
+    }
+
+    search.addEventListener('input', render);
+
+    pills.forEach(pill=>{
+      pill.addEventListener('click', ()=>{
+        const key = pill.dataset.sort;
+        if(sortKey===key){ sortAsc=!sortAsc; }
+        else { sortKey=key; sortAsc = key==='name'; }
+        pills.forEach(p=>p.classList.remove('active','desc'));
+        pill.classList.add('active');
+        if(!sortAsc) pill.classList.add('desc');
+        render();
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

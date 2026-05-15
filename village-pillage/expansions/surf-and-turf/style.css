@@ -1,0 +1,60 @@
+/* === Expansion Page — Village Pillage: Surf & Turf === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --card: #0f3460;
+  --accent: #c850c0;
+  --text: #eee;
+  --text-muted: #aab;
+  --success: #53d769;
+  --warning: #f5a623;
+  --radius: 10px;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; padding: 2rem 1.25rem; }
+
+.back-link { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 1.5rem; }
+.back-link:hover { text-decoration: underline; }
+
+.game-header { margin-bottom: 2rem; }
+.game-header h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+.game-header .meta { color: var(--text-muted); font-size: 0.95rem; }
+
+.cover-banner { width: 100%; max-height: 280px; border-radius: var(--radius); overflow: hidden; margin-bottom: 1rem; }
+.cover-banner img { width: 100%; max-height: 280px; object-fit: cover; display: block; }
+
+details { background: var(--surface); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius); margin-bottom: 0.75rem; overflow: hidden; }
+details[open] { border-color: rgba(200,80,192,0.3); }
+
+summary { padding: 0.85rem 1.25rem; cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; gap: 0.6rem; user-select: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: '▸'; transition: transform 0.2s; font-size: 0.8rem; color: var(--accent); }
+details[open] > summary::before { transform: rotate(90deg); }
+
+.section-body { padding: 0 1.25rem 1.25rem; font-size: 0.95rem; }
+.section-body p { margin-bottom: 0.6rem; }
+.section-body ul, .section-body ol { margin: 0.5rem 0 0.75rem 1.25rem; }
+.section-body li { margin-bottom: 0.35rem; }
+
+.section-body table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
+.section-body th, .section-body td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.section-body th { background: rgba(255,255,255,0.04); font-weight: 600; color: var(--accent); }
+.section-body tr:last-child td { border-bottom: none; }
+
+.tip, .warning { border-radius: 6px; padding: 0.65rem 0.85rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.5; }
+.tip { background: rgba(83,215,105,0.1); border-left: 3px solid var(--success); }
+.warning { background: rgba(245,166,35,0.1); border-left: 3px solid var(--warning); }
+
+.badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.badge-surf { background: rgba(83,215,105,0.15); color: var(--success); }
+.badge-turf { background: rgba(200,80,192,0.15); color: var(--accent); }
+
+@media (max-width: 600px) {
+  .container { padding: 1.25rem 1rem; }
+  .game-header h1 { font-size: 1.5rem; }
+}

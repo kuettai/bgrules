@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railroad Tiles — Rules Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← All Games</a>
+
+    <div class="game-header">
+      <div class="cover-banner">
+        <img src="cover.webp" alt="Railroad Tiles box cover">
+      </div>
+      <h1>🚂 Railroad Tiles</h1>
+      <p class="meta">1–4 players · ~30–45 min · Designers: Hjalmar Hach &amp; Lorenzo Silva · Horrible Guild (2024)</p>
+
+      <div class="bgg-stats">
+        <div class="bgg-stat">
+          <span class="bgg-value">7.9</span>
+          <span class="bgg-label">BGG Rating</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">2.0<small>/5</small></span>
+          <span class="bgg-label">Complexity</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">N/A</span>
+          <span class="bgg-label">BGG Rank</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">2</span>
+          <span class="bgg-label">Best At</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPANSION NAV -->
+    <div class="expansion-nav">
+      <span class="expansion-nav-label">📦 Expansions</span>
+      <div class="expansion-pills">
+        <a href="expansions/world/index.html" class="expansion-pill">🌍 World</a>
+        <a href="expansions/canals/index.html" class="expansion-pill">🚣 Canals</a>
+        <a href="expansions/countryside/index.html" class="expansion-pill">🐄 Countryside</a>
+        <a href="expansions/desert/index.html" class="expansion-pill">🐪 Desert</a>
+        <a href="expansions/energy/index.html" class="expansion-pill">⚡ Energy</a>
+        <a href="expansions/forest/index.html" class="expansion-pill">🌲 Forest</a>
+        <a href="expansions/lakes/index.html" class="expansion-pill">⛵ Lakes</a>
+        <a href="expansions/monuments/index.html" class="expansion-pill">🏛️ Monuments</a>
+      </div>
+    </div>
+
+    <!-- 1. PLAYER AID CARD -->
+    <details open>
+      <summary>🃏 Player Aid Card</summary>
+      <div class="section-body">
+
+        <p><strong>Game length:</strong> 8 rounds. Tracked by the stack of Placement Tokens on the Station Board.</p>
+
+        <!-- ROUND FLOW -->
+        <div class="flow-row">
+          <div class="flow-step">🔄 Refresh</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step highlight">🎯 Draft</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🧩 Place Tiles</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step highlight">🚶 Place Pawns</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">⭐ Cleanup</div>
+        </div>
+
+        <p><strong>1. Refresh:</strong> Reveal the next Placement Token. If it has a 🚩 flag, every player places one Objective tile into their tableau. Refill empty columns with tiles from the bag.</p>
+        <p><strong>2. Draft:</strong> In turn order, each player picks a column of tiles (2, 3, or 4 tiles). The column you pick determines your turn order next round — fewer tiles = earlier pick next round.</p>
+        <p><strong>3. Place Tiles:</strong> Immediately add all drafted tiles to your tableau. Each tile must be adjacent (side-to-side) to at least one existing tile. Matching edges required:</p>
+        <ul>
+          <li>🛤️ Railroad edge → Railroad edge</li>
+          <li>🛣️ Highway edge → Highway edge</li>
+          <li>🌿 Empty edge → Empty edge</li>
+        </ul>
+
+        <div class="warning">⚠️ You cannot rotate/flip a tile to break edge-matching rules. All four sides of every tile must match their neighbors.</div>
+
+        <p><strong>4. Place Pawns:</strong> Check all active Placement Tokens. For each token, gain the matching pawn and place it on a Pinpoint in your tableau:</p>
+        <ul>
+          <li>🚗 <strong>Car</strong> (blue) — placed on Highway Pinpoints</li>
+          <li>🚂 <strong>Train</strong> (green) — placed on Railroad Pinpoints</li>
+          <li>🧳 <strong>Traveler</strong> (red) — placed on either Highway or Railroad Pinpoints</li>
+        </ul>
+        <p>Score immediately when placing: <strong>1 VP + 1 VP per same-type pawn already connected in that network</strong> (max 5 VP per pawn).</p>
+
+        <div class="tip">💡 Travelers use <em>both</em> road and rail networks — they score off every connected traveler regardless of whether the link is highway or railroad. Cars and trains only count their own network type.</div>
+
+        <p><strong>5. Cleanup:</strong> The undrafted column stays; add a ⭐ Star token to it. Move turn-order markers based on this round's draft picks.</p>
+
+        <!-- CONVEYER BELT DIAGRAM -->
+        <p><strong>Placement Token Stack (Conveyer Belt):</strong></p>
+        <div class="svg-diagram">
+          <svg viewBox="0 0 420 70" width="420" height="70" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="10" width="90" height="50" rx="25" fill="#0f3460" stroke="#e94560" stroke-width="2"/>
+            <text x="50" y="42" text-anchor="middle" fill="#eee" font-size="12" font-weight="bold" font-family="sans-serif">Round 1</text>
+            <text x="110" y="40" text-anchor="middle" fill="#e94560" font-size="18" font-family="sans-serif">→</text>
+            <rect x="125" y="10" width="90" height="50" rx="25" fill="#0f3460" stroke="#53d769" stroke-width="2"/>
+            <text x="170" y="42" text-anchor="middle" fill="#eee" font-size="12" font-weight="bold" font-family="sans-serif">Round 2</text>
+            <text x="230" y="40" text-anchor="middle" fill="#e94560" font-size="18" font-family="sans-serif">→</text>
+            <rect x="245" y="10" width="90" height="50" rx="25" fill="#0f3460" stroke="#53d769" stroke-width="2"/>
+            <text x="290" y="42" text-anchor="middle" fill="#eee" font-size="12" font-weight="bold" font-family="sans-serif">Round 3</text>
+            <text x="350" y="40" text-anchor="middle" fill="#e94560" font-size="18" font-family="sans-serif">→</text>
+            <rect x="365" y="10" width="50" height="50" rx="25" fill="#0f3460" stroke="#aab" stroke-width="1" stroke-dasharray="4"/>
+            <text x="390" y="42" text-anchor="middle" fill="#aab" font-size="12" font-family="sans-serif">…8</text>
+          </svg>
+        </div>
+        <p>Each round reveals one circular Placement Token. All revealed tokens are active — so by round 3 you place 3 pawns per round. Tokens show 🚗, 🚂, or 🧳 (some show a choice of two).</p>
+
+        <p><strong>⭐ Star Tokens:</strong> Spend during Pawn Placement to change one pawn into any other type. Unspent stars = 1 VP each at end of game.</p>
+      </div>
+    </details>
+
+    <!-- 2. SCORING & END GAME -->
+    <details>
+      <summary>🏆 Scoring &amp; End Game</summary>
+      <div class="section-body">
+        <p>The game ends after <strong>8 rounds</strong>. Final scoring:</p>
+
+        <div class="score-grid">
+          <div class="score-card">
+            <span class="sc-icon">📐</span>
+            <span class="sc-value">+1 VP/tile</span>
+            <span class="sc-label">Largest Rectangle</span>
+          </div>
+          <div class="score-card">
+            <span class="sc-icon">🏙️</span>
+            <span class="sc-value">+5 VP each</span>
+            <span class="sc-label">Cities (3+ Towns)</span>
+          </div>
+          <div class="score-card">
+            <span class="sc-icon">🚶</span>
+            <span class="sc-value">During game</span>
+            <span class="sc-label">Pawn Placements</span>
+          </div>
+          <div class="score-card">
+            <span class="sc-icon">⭐</span>
+            <span class="sc-value">+1 VP each</span>
+            <span class="sc-label">Unspent Stars</span>
+          </div>
+          <div class="score-card">
+            <span class="sc-icon">🚫</span>
+            <span class="sc-value">−1 VP each</span>
+            <span class="sc-label">Open Ends (after 5 free)</span>
+          </div>
+          <div class="score-card">
+            <span class="sc-icon">🎯</span>
+            <span class="sc-value">+5 VP each</span>
+            <span class="sc-label">Completed Objectives</span>
+          </div>
+        </div>
+
+        <p><strong>📐 Largest Rectangle:</strong> Find the biggest fully-filled rectangle of tiles in your tableau. Count every tile inside it — that's your bonus. This is often the single biggest scoring category (commonly 15–25+ VP).</p>
+
+        <div class="tip">💡 The rectangle must be completely filled — no gaps. Prioritize building a compact, dense grid rather than sprawling outward.</div>
+
+        <p><strong>🏙️ Cities:</strong> A City = 3 or more adjacent Town tiles (orthogonal only, no diagonals). Each distinct city scores 5 VP regardless of size. A 3-tile city and a 7-tile city both score 5 VP — so aim for multiple small cities!</p>
+
+        <p><strong>🚫 Open Ends:</strong> Any tile edge with an unconnected Railroad or Highway counts as an opening. Your first 5 openings are free; each additional opening costs −1 VP.</p>
+
+        <div class="warning">⚠️ Open ends add up fast in the late game. Plan your final rounds to close off dangling connections.</div>
+
+        <p><strong>Typical scores:</strong> 25–60 VP range across 4 plays. Highest scores come from large rectangles + chained pawn networks.</p>
+      </div>
+    </details>
+
+    <!-- 3. QUICK SETUP -->
+    <details>
+      <summary>⚙️ Quick Setup</summary>
+      <div class="section-body">
+        <ol>
+          <li>Shuffle all <strong>Route Tiles</strong> into the cloth bag.</li>
+          <li>Place the <strong>Station Board</strong> in the center of the table.</li>
+          <li>Shuffle all <strong>Placement Tokens</strong> face-down. Create a face-down pile on the Clock space of the Station Board.</li>
+          <li>Sort pawns by type: 🚗 Cars (blue), 🚂 Trains (green), 🧳 Travelers (red). Place nearby with Prestige tokens (1/3/10/20).</li>
+          <li>Place ⭐ Star tokens in a supply.</li>
+          <li>Each player takes a <strong>Player Pawn</strong> and places it in the Turn Order area.</li>
+          <li>Draw tiles from the bag to fill the Station Board columns (2/3/4 tiles per column depending on player count).</li>
+          <li><strong>Round 1 draft:</strong> Each player drafts one starting tile (or deal 1 random tile each for faster setup).</li>
+        </ol>
+
+        <p><strong>With Objectives (Advanced Mode):</strong></p>
+        <ol>
+          <li>Choose 3 of the 7 Objective tile types.</li>
+          <li>Give each player the same set of 3 Objective tiles (set aside, not in tableau yet).</li>
+          <li>Objectives enter play when a Placement Token with a 🚩 flag is revealed.</li>
+        </ol>
+
+        <div class="tip">💡 For your first game, skip Objectives. Add them in your second play — they're easy to learn and add meaningful decisions.</div>
+      </div>
+    </details>
+
+    <!-- 4. GOTCHA / COMMON MISTAKES -->
+    <details>
+      <summary>⚠️ Gotcha / Common Mistakes</summary>
+      <div class="section-body">
+        <ul>
+          <li><strong>All 4 edges must match.</strong> Not just the side you're connecting — check every adjacent tile edge.</li>
+          <li><strong>Pawns score immediately</strong> when placed, not at end of game. Take Prestige tokens right away.</li>
+          <li><strong>Travelers use both networks.</strong> Cars only count highway connections; trains only count rail. But travelers count connections through both road and rail — making them potentially more valuable.</li>
+          <li><strong>Max 5 VP per pawn.</strong> Even if your network has 6+ same-type pawns, each new pawn scores at most 5 VP (1 base + 4 connected).</li>
+          <li><strong>Cities need exactly 3+ adjacent Towns.</strong> Diagonals don't count. Two adjacent towns = no city. A city of any size = 5 VP (not scaled by size).</li>
+          <li><strong>Open ends: first 5 are free.</strong> Only the 6th, 7th, 8th… cost −1 VP each. Don't panic about a few loose ends early on.</li>
+          <li><strong>Star tokens can change pawn type.</strong> Spend 1 star during Pawn Placement to swap one pawn for any other type. Don't forget this!</li>
+          <li><strong>Undrafted column carries over</strong> with a Star token added. It can become very attractive next round.</li>
+          <li><strong>2-player token:</strong> In 2P games, flip the 2-Player Token each round to determine which leftover column to discard. Easy to forget!</li>
+          <li><strong>Placement Tokens accumulate.</strong> By round 3 you're placing 3 pawns per round. Don't skip earlier tokens — all revealed tokens are active every round.</li>
+        </ul>
+
+        <div class="warning">⚠️ The most common mistake: forgetting that ALL active Placement Tokens grant pawns each round, not just the newly revealed one.</div>
+      </div>
+    </details>
+
+    <!-- 5. GOAL TILES (OBJECTIVES) -->
+    <details>
+      <summary>🎯 Goal Tiles (Advanced Mode)</summary>
+      <div class="section-body">
+        <p>The game includes <strong>7 types of Objective tiles</strong> (4 copies each). Choose 3 types per game and give each player the same set of 3.</p>
+        <p>Objectives are placed into your tableau when a Placement Token with a 🚩 flag is revealed. They follow normal tile placement rules and score <strong>5 VP each</strong> if completed.</p>
+
+        <p><strong>Objective tiles act as normal tiles</strong> — they have edges (Railroad/Highway/Empty) and fit into your grid. But each has a unique scoring condition based on what surrounds it or how your tableau is built.</p>
+
+        <div class="tip">💡 Plan ahead for where you'll place Objectives. Since you know which 3 you have from the start, you can shape your tableau to accommodate them before the flag appears.</div>
+
+        <div class="warning">⚠️ Some Objectives (like the Stadium) require specific Pinpoint types on surrounding tiles. If the right tiles never come out, you may not complete it — don't over-commit to a single Objective.</div>
+      </div>
+    </details>
+
+    <!-- 6. MEEPLE SCORING DETAIL -->
+    <details>
+      <summary>🔢 Meeple Scoring Detail</summary>
+      <div class="section-body">
+        <p>When you place a pawn on a Pinpoint, score immediately:</p>
+
+        <table>
+          <thead>
+            <tr><th>Same-type pawns already in network</th><th>Score for new pawn</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0 (first in network)</td><td>1 VP</td></tr>
+            <tr><td>1</td><td>2 VP</td></tr>
+            <tr><td>2</td><td>3 VP</td></tr>
+            <tr><td>3</td><td>4 VP</td></tr>
+            <tr><td>4+</td><td>5 VP (max)</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>Network rules by pawn type:</strong></p>
+        <ul>
+          <li>🚗 <strong>Cars:</strong> Only count other cars connected via continuous Highway. A station/exchange breaks the highway network.</li>
+          <li>🚂 <strong>Trains:</strong> Only count other trains connected via continuous Railroad. A station/exchange breaks the rail network.</li>
+          <li>🧳 <strong>Travelers:</strong> Count other travelers connected via <em>any combination</em> of Highway and Railroad. Stations/exchanges do NOT break traveler networks.</li>
+        </ul>
+
+        <div class="tip">💡 Travelers are the most flexible pawn type. Building one long mixed network and loading it with travelers can be very efficient — but you're at the mercy of which Placement Tokens come out.</div>
+
+        <p><strong>Example:</strong> You place a 🚗 Car on a highway that already has 2 other 🚗 Cars connected. You score 3 VP (1 base + 2 for existing cars). Take 3 Prestige tokens immediately.</p>
+      </div>
+    </details>
+
+    <!-- 7. SOLO MODE -->
+    <details>
+      <summary>🧑 Solo Mode</summary>
+      <div class="section-body">
+        <p>Solo mode uses the same core rules with these changes:</p>
+        <ul>
+          <li>Set up the Station Board as normal with tile columns.</li>
+          <li>Each round, pick one column of tiles. <strong>Discard the rest.</strong></li>
+          <li>No turn-order considerations — just optimize your own tableau.</li>
+          <li>The game includes <strong>15 solo missions</strong> with 1–3 star difficulty ratings.</li>
+          <li>Missions focus on specific goals: town tiles, certain Pinpoint colors, creating multiple cities, hitting score thresholds, etc.</li>
+        </ul>
+
+        <div class="tip">💡 Solo target scores are typically 50–60+ VP. Focus on building a tight rectangle and chaining pawn networks efficiently.</div>
+      </div>
+    </details>
+
+    <!-- 8. TILE TYPES REFERENCE -->
+    <details>
+      <summary>🧱 Tile Types Reference</summary>
+      <div class="section-body">
+        <p>Tiles come in two body types:</p>
+        <ul>
+          <li><strong>Field tiles</strong> — green/open landscape. No special scoring.</li>
+          <li><strong>Town tiles</strong> — blue buildings. Group 3+ adjacent towns (orthogonal) to form a City (5 VP).</li>
+        </ul>
+        <p>Each tile has 4 edges, each one of:</p>
+        <ul>
+          <li>🛤️ <strong>Railroad</strong> — must connect to another Railroad edge</li>
+          <li>🛣️ <strong>Highway</strong> — must connect to another Highway edge</li>
+          <li>🌿 <strong>Empty</strong> — must connect to another Empty edge</li>
+        </ul>
+        <p>Some tiles have <strong>Pinpoints</strong> (small GPS-like icons) in blue (Car), green (Train), or red (Traveler). These are the spots where you place pawns.</p>
+        <p>Some tiles have <strong>Stations/Exchanges</strong> — where a road meets a rail. These break Car and Train networks but NOT Traveler networks.</p>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome To… — Rules Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← All Games</a>
+
+    <div class="game-header">
+      <div class="cover-banner">
+        <img src="cover.webp" alt="Welcome To… box cover">
+      </div>
+      <h1>🏘️ Welcome To…</h1>
+      <p class="meta">1–100 players · ~25 min · Designer: Benoit Turpin · Blue Cocker / Deep Water Games (2018)</p>
+
+      <div class="bgg-stats">
+        <div class="bgg-stat">
+          <span class="bgg-value">7.5</span>
+          <span class="bgg-label">BGG Rating</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">1.84<small>/5</small></span>
+          <span class="bgg-label">Complexity</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">~#190</span>
+          <span class="bgg-label">BGG Rank</span>
+        </div>
+        <div class="bgg-stat">
+          <span class="bgg-value">2–4</span>
+          <span class="bgg-label">Best At</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPANSION NAV -->
+    <div class="expansion-nav">
+      <span class="expansion-nav-label">📦 Expansions</span>
+      <div class="expansion-pills">
+        <a href="expansions/winter-wonderland/index.html" class="expansion-pill">❄️ Winter Wonderland</a>
+        <a href="expansions/spring/index.html" class="expansion-pill">🐣 Spring</a>
+        <a href="expansions/summer/index.html" class="expansion-pill">🍦 Summer</a>
+        <a href="expansions/halloween/index.html" class="expansion-pill">🎃 Halloween</a>
+        <a href="expansions/outbreak/index.html" class="expansion-pill">🧟 Outbreak</a>
+        <a href="expansions/doomsday/index.html" class="expansion-pill">☢️ Doomsday</a>
+        <a href="expansions/quack/index.html" class="expansion-pill">🦆 Quack</a>
+      </div>
+    </div>
+
+    <!-- 1. PLAYER AID CARD -->
+    <details open>
+      <summary>🃏 Player Aid — Turn Reference</summary>
+      <div class="section-body">
+
+        <!-- Street layout SVG -->
+        <div class="svg-diagram">
+          <svg viewBox="0 0 480 170" width="480" height="170" xmlns="http://www.w3.org/2000/svg">
+            <!-- Street 1 (10 houses) -->
+            <text x="8" y="28" fill="#e94560" font-size="10" font-weight="bold" font-family="sans-serif">ST 1</text>
+            <g transform="translate(50,10)">
+              <rect x="0" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="42" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="84" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="126" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="168" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="210" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="252" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="294" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="336" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <rect x="378" y="0" width="38" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <!-- Example numbers -->
+              <text x="19" y="21" text-anchor="middle" fill="#53d769" font-size="11" font-weight="bold" font-family="sans-serif">2</text>
+              <text x="61" y="21" text-anchor="middle" fill="#eee" font-size="11" font-family="sans-serif">?</text>
+              <text x="103" y="21" text-anchor="middle" fill="#53d769" font-size="11" font-weight="bold" font-family="sans-serif">5</text>
+              <text x="145" y="21" text-anchor="middle" fill="#eee" font-size="11" font-family="sans-serif">?</text>
+              <text x="187" y="21" text-anchor="middle" fill="#53d769" font-size="11" font-weight="bold" font-family="sans-serif">9</text>
+              <text x="229" y="21" text-anchor="middle" fill="#eee" font-size="11" font-family="sans-serif">?</text>
+              <text x="271" y="21" text-anchor="middle" fill="#eee" font-size="11" font-family="sans-serif">?</text>
+              <text x="313" y="21" text-anchor="middle" fill="#eee" font-size="11" font-family="sans-serif">?</text>
+              <text x="355" y="21" text-anchor="middle" fill="#eee" font-size="11" font-family="sans-serif">?</text>
+              <text x="397" y="21" text-anchor="middle" fill="#53d769" font-size="11" font-weight="bold" font-family="sans-serif">14</text>
+              <!-- Arrow showing ascending -->
+              <line x1="0" y1="38" x2="416" y2="38" stroke="#e94560" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+              <text x="208" y="50" text-anchor="middle" fill="#aab" font-size="8" font-family="sans-serif">ascending left → right (1–15, no repeats)</text>
+            </g>
+            <defs><marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#e94560"/></marker></defs>
+            <!-- Street 2 label -->
+            <text x="8" y="83" fill="#e94560" font-size="10" font-weight="bold" font-family="sans-serif">ST 2</text>
+            <rect x="50" y="65" width="416" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <text x="258" y="84" text-anchor="middle" fill="#aab" font-size="10" font-family="sans-serif">11 houses</text>
+            <!-- Street 3 label -->
+            <text x="8" y="123" fill="#e94560" font-size="10" font-weight="bold" font-family="sans-serif">ST 3</text>
+            <rect x="50" y="105" width="416" height="30" rx="3" fill="#0f3460" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <text x="258" y="124" text-anchor="middle" fill="#aab" font-size="10" font-family="sans-serif">12 houses</text>
+            <!-- Parks label -->
+            <text x="50" y="155" fill="#53d769" font-size="9" font-family="sans-serif">🌳 Parks at end of each street</text>
+            <text x="260" y="155" fill="#5bc0de" font-size="9" font-family="sans-serif">🏊 Pools on specific houses</text>
+          </svg>
+        </div>
+
+        <!-- TURN FLOW -->
+        <div class="flow-row">
+          <div class="flow-step highlight">🔄 Flip 3 Cards</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🏠 Pick 1 Pair</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">✏️ Write Number</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step highlight">⚡ Use Effect</div>
+        </div>
+
+        <p><strong>Every turn (simultaneous):</strong> Flip top card from each of 3 decks → creates 3 number + effect pairs → everyone picks 1 pair → write the house number on any street → optionally use the effect.</p>
+
+        <p><strong>The 6 Effects:</strong></p>
+        <div class="effect-grid">
+          <div class="effect-card">
+            <span class="effect-icon">📐</span>
+            <span class="effect-name">Surveyor</span>
+            Build a fence between two houses on any street
+          </div>
+          <div class="effect-card">
+            <span class="effect-icon">🏗️</span>
+            <span class="effect-name">Real Estate</span>
+            Increase value of one estate size column
+          </div>
+          <div class="effect-card">
+            <span class="effect-icon">🌳</span>
+            <span class="effect-name">Landscaper</span>
+            Build next park on the same street as your house
+          </div>
+          <div class="effect-card">
+            <span class="effect-icon">🏊</span>
+            <span class="effect-name">Pool Mfr.</span>
+            Build pool if house is on a pool space
+          </div>
+          <div class="effect-card">
+            <span class="effect-icon">👷</span>
+            <span class="effect-name">Temp Agency</span>
+            Adjust house number ±1 or ±2
+          </div>
+          <div class="effect-card">
+            <span class="effect-icon">🔁</span>
+            <span class="effect-name">Bis</span>
+            Duplicate an adjacent house number on any street
+          </div>
+        </div>
+
+        <p><strong>Can't place?</strong> Take a Building Permit Refusal (penalty). 3rd refusal = game over.</p>
+        <p><strong>Card peek:</strong> Corner icons on each card show the effect on the reverse side — plan ahead!</p>
+      </div>
+    </details>
+
+    <!-- 2. WINNING CONDITION / SCORING -->
+    <details>
+      <summary>🏆 Scoring &amp; End Game</summary>
+      <div class="section-body">
+        <p>The game ends immediately when any player:</p>
+        <ul>
+          <li>Completes all <strong>3 City Plans</strong>, OR</li>
+          <li>Fills in <strong>all houses</strong> on all 3 streets, OR</li>
+          <li>Takes their <strong>3rd Building Permit Refusal</strong></li>
+        </ul>
+
+        <div class="score-flow">
+          <div class="score-box"><span class="score-icon">📋</span>City Plans<br><span class="score-label">per card</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">🌳</span>Parks<br><span class="score-label">per street</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">🏊</span>Pools<br><span class="score-label">total</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">👷</span>Temps<br><span class="score-label">vs others</span></div>
+          <span class="score-plus">+</span>
+          <div class="score-box"><span class="score-icon">🏗️</span>Estates<br><span class="score-label">size × value</span></div>
+          <span class="score-minus">−</span>
+          <div class="score-box"><span class="score-icon">🔁</span>Bis<br><span class="score-label">penalty</span></div>
+          <span class="score-minus">−</span>
+          <div class="score-box"><span class="score-icon">🚫</span>Refusals<br><span class="score-label">penalty</span></div>
+        </div>
+
+        <table>
+          <tr><th>Category</th><th>How to Score</th></tr>
+          <tr><td>City Plans</td><td>Points shown on each card (first to complete = higher value)</td></tr>
+          <tr><td>Parks (×3 streets)</td><td>Lowest uncrossed value per street. More parks = more points.</td></tr>
+          <tr><td>Pools</td><td>Lowest uncrossed value in pool track (0/3/6/9/13/17/21/27/33)</td></tr>
+          <tr><td>Temp Agency</td><td>Most temps = 7 pts, 2nd = 4 pts, 3rd = 1 pt. Ties get full value.</td></tr>
+          <tr><td>Estates</td><td>Count completed estates of each size (1–6) × value from Real Estate column</td></tr>
+          <tr><td>Bis (penalty)</td><td>Lowest uncrossed value in Bis track (−0/−1/−3/−6/−9/−12/−?)</td></tr>
+          <tr><td>Permit Refusals</td><td>Lowest uncrossed value (−0/−3/−5)</td></tr>
+        </table>
+
+        <div class="tip">
+          <strong>Tiebreaker:</strong> Most completed estates wins. Still tied? Most 1-house estates, then 2-house, etc.
+        </div>
+
+        <div class="warning">
+          <strong>Estates scoring:</strong> Only COMPLETED estates count (all houses between fences filled in). An incomplete estate of any size = 0 points for that group.
+        </div>
+      </div>
+    </details>
+
+    <!-- 3. QUICK SETUP -->
+    <details>
+      <summary>⚙️ Quick Setup</summary>
+      <div class="section-body">
+        <ol>
+          <li>Give each player a <strong>score sheet</strong> and a pen (not pencil — no erasing!).</li>
+          <li>Shuffle the 81 construction cards into <strong>3 equal decks</strong> of 27 cards, number-side face up.</li>
+          <li>Deal <strong>3 City Plan cards</strong> (one n°1, one n°2, one n°3) face up. Use basic or advanced plans.</li>
+          <li>Flip the top card of each deck onto its discard pile (effect-side up) — this creates the first 3 number+effect pairs.</li>
+          <li>Everyone simultaneously picks a pair and begins!</li>
+        </ol>
+        <div class="tip">
+          <strong>Streets have different lengths:</strong> Street 1 = 10 houses, Street 2 = 11 houses, Street 3 = 12 houses. Parks are at the end of each street. Pools are pre-printed on specific houses.
+        </div>
+      </div>
+    </details>
+
+    <!-- 4. GOTCHA / COMMON MISTAKES -->
+    <details>
+      <summary>⚠️ Gotcha / Common Mistakes</summary>
+      <div class="section-body">
+        <p><strong>Numbers must be strictly ascending left→right.</strong><br>
+        No duplicates on the same street (unless using Bis). Gaps are fine, but you can paint yourself into a corner fast.</p>
+
+        <p><strong>You MUST write a house number every turn.</strong><br>
+        The effect is optional, but the number is mandatory. If you can't legally place any of the 3 available numbers, you take a Building Permit Refusal.</p>
+
+        <p><strong>Bis houses must be adjacent AND in the same estate.</strong><br>
+        The duplicate must go next to an existing copy of that number. You cannot place a Bis across a fence. You also can't later split a Bis pair with a fence.</p>
+
+        <p><strong>Pool Manufacturer only works on pool spaces.</strong><br>
+        You can write any number on a pool space without the Pool effect — you just don't score the pool. Conversely, using Pool Mfr. on a non-pool space does nothing.</p>
+
+        <p><strong>Surveyor fences can go on ANY street.</strong><br>
+        The fence doesn't have to be on the same street where you wrote your house number. This is the only effect that works cross-street.</p>
+
+        <p><strong>Temp Agency range: the number can become 0 (or even 17).</strong><br>
+        A 2 with Temp Agency can be written as 0, 1, 2, 3, or 4. A 14 can become 16. A 15 can become 17.</p>
+
+        <p><strong>City Plan estates get "locked" once claimed.</strong><br>
+        Mark the estates used to complete a plan — they can't count toward another plan, and you can't split them with fences later.</p>
+
+        <p><strong>Simultaneous play — no turns.</strong><br>
+        Everyone uses the same 3 card pairs each round. There's no turn order in the base game.</p>
+
+        <div class="warning">
+          <strong>Estates ≥ 7 houses score nothing!</strong> Only sizes 1–6 have scoring columns. Don't build oversized estates.
+        </div>
+
+        <div class="warning">
+          <strong>Real Estate Agent doesn't score estates directly.</strong> It increases the per-house multiplier for a chosen estate size. You still need completed estates of that size to earn points.
+        </div>
+      </div>
+    </details>
+
+    <!-- 5. EFFECTS DETAIL -->
+    <details>
+      <summary>⚡ Effects — Detailed Reference</summary>
+      <div class="section-body">
+
+        <table>
+          <tr><th>Effect</th><th>Icon</th><th>Rules</th></tr>
+          <tr>
+            <td><strong>Surveyor</strong></td>
+            <td>📐</td>
+            <td>Draw a fence between any two adjacent houses on <em>any</em> street (not just where you placed your number). Creates estate boundaries. Each street has implied fences at both ends.</td>
+          </tr>
+          <tr>
+            <td><strong>Real Estate Agent</strong></td>
+            <td>🏗️</td>
+            <td>Cross off the topmost (lowest) uncrossed value in any one estate-size column (1–6). Increases the per-house multiplier for completed estates of that size at end of game.</td>
+          </tr>
+          <tr>
+            <td><strong>Landscaper</strong></td>
+            <td>🌳</td>
+            <td>Cross off the leftmost uncrossed park on the <em>same street</em> where you wrote your house number. Parks score increasing points and must be filled left to right.</td>
+          </tr>
+          <tr>
+            <td><strong>Pool Manufacturer</strong></td>
+            <td>🏊</td>
+            <td>If the house you just numbered has a pre-printed pool symbol, circle it and cross off the next pool space on your score track. No pool symbol = no effect.</td>
+          </tr>
+          <tr>
+            <td><strong>Temp Agency</strong></td>
+            <td>👷</td>
+            <td>Modify the chosen house number by +1, +2, −1, or −2 (making range 0–17 possible). Cross off a Temp Agency box. Most temps at end of game wins bonus points.</td>
+          </tr>
+          <tr>
+            <td><strong>Bis</strong></td>
+            <td>🔁</td>
+            <td>After writing your house number, duplicate <em>any</em> existing number on <em>any</em> street into an adjacent empty house (must be same estate — no fence between). Cross off a Bis penalty box. Multiple Bis on the same number = triples, quads, etc.</td>
+          </tr>
+        </table>
+
+        <div class="tip">
+          <strong>Strategy:</strong> Surveyor and Real Estate Agent are the engine combo. Build fences to create estates, then pump up their value. Landscaper is steady points with no downside. Pools are opportunistic — don't force them.
+        </div>
+      </div>
+    </details>
+
+    <!-- 6. CITY PLANS -->
+    <details>
+      <summary>📋 City Plans</summary>
+      <div class="section-body">
+        <p>3 City Plan cards are dealt each game (one each of n°1, n°2, n°3). First to complete gets the higher point value; later completers get the lower value.</p>
+
+        <p><strong>Basic Plans</strong> — require specific combinations of completed estates:</p>
+        <table>
+          <tr><th>Plan #</th><th>Requirement Examples</th><th>1st / 2nd pts</th></tr>
+          <tr><td>n°1</td><td>Six 1-house estates / Two 3-house estates / etc.</td><td>8/4, 8/4, 8/4</td></tr>
+          <tr><td>n°2</td><td>One 4-house + one 1-house / Two 2-house + one 3-house / etc.</td><td>11/6, 10/6, 9/5</td></tr>
+          <tr><td>n°3</td><td>One 5-house + one 2-house / Three 3-house / etc.</td><td>12/7, 12/7, 13/7</td></tr>
+        </table>
+
+        <p><strong>Advanced Plans</strong> (marked with ★) — more specific requirements:</p>
+        <ul>
+          <li>Fill every house on the bottom (longest) street</li>
+          <li>Build the first and last house on each street</li>
+          <li>Build all parks and pools on a specific street</li>
+          <li>Build all parks and pools on any two streets</li>
+          <li>Build 5 Bis duplicates</li>
+          <li>Hire 7 Temp Agency workers</li>
+          <li>All parks + all pools on one street + one roundabout (advanced variant)</li>
+        </ul>
+
+        <div class="warning">
+          <strong>Locking estates:</strong> When you claim a City Plan, mark the estates you used. Those estates are locked — they can't be used for another plan, and you can't add fences inside them.
+        </div>
+
+        <div class="tip">
+          <strong>Pools are reusable:</strong> Houses with pools that were used to complete a City Plan can still count toward other plans. Only the estate boundaries get locked.
+        </div>
+
+        <p><strong>Reshuffle option:</strong> The first player to complete any City Plan may optionally trigger a one-time reshuffle — leave the 3 top discard cards, shuffle the remaining ~78 cards, and re-deal into 3 decks.</p>
+      </div>
+    </details>
+
+    <!-- 7. ESTATES SCORING BREAKDOWN -->
+    <details>
+      <summary>🏘️ Estates &amp; Real Estate Scoring</summary>
+      <div class="section-body">
+        <p>An <strong>estate</strong> is a group of 1–6 consecutive houses between two fences, all filled in with numbers. Each street has implied fences at both ends.</p>
+
+        <p><strong>Default estate value = 1 pt per house.</strong> Each Real Estate Agent effect you use increases the multiplier for one estate size.</p>
+
+        <table>
+          <tr><th>Estate Size</th><th>Base Value</th><th>After 1 RE</th><th>After 2 RE</th><th>After 3 RE</th><th>After 4+ RE</th></tr>
+          <tr><td>1 house</td><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr><td>2 houses</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+          <tr><td>3 houses</td><td>3</td><td>3</td><td>4</td><td>5</td><td>6+</td></tr>
+          <tr><td>4 houses</td><td>4</td><td>4</td><td>5</td><td>6</td><td>7+</td></tr>
+          <tr><td>5 houses</td><td>5</td><td>5</td><td>6</td><td>7</td><td>8+</td></tr>
+          <tr><td>6 houses</td><td>6</td><td>6</td><td>7</td><td>8</td><td>10+</td></tr>
+        </table>
+
+        <p><strong>Scoring formula:</strong> (# of completed estates of size N) × (current multiplier for size N)</p>
+
+        <div class="tip">
+          <strong>Strategy:</strong> Pumping Real Estate on a size you have many of is the biggest point swing in the game. Two completed 3-house estates with 3 Real Estate upgrades = 2 × 5 = 10 pts instead of 2 × 3 = 6.
+        </div>
+
+        <div class="warning">
+          <strong>7+ house estates = 0 points.</strong> There is no column for estates larger than 6. Always fence off before an estate grows too large.
+        </div>
+      </div>
+    </details>
+
+    <!-- 8. PARKS & POOLS SCORING -->
+    <details>
+      <summary>🌳🏊 Parks &amp; Pools Scoring</summary>
+      <div class="section-body">
+        <p><strong>Parks</strong> — scored per street. Cross off parks left to right using the Landscaper effect.</p>
+        <table>
+          <tr><th>Street</th><th>Park Spaces</th><th>Point Values (cumulative)</th></tr>
+          <tr><td>Street 1 (10 houses)</td><td>3 parks</td><td>2 / 4 / 10</td></tr>
+          <tr><td>Street 2 (11 houses)</td><td>4 parks</td><td>2 / 4 / 8 / 14</td></tr>
+          <tr><td>Street 3 (12 houses)</td><td>5 parks</td><td>2 / 4 / 6 / 10 / 18</td></tr>
+        </table>
+        <p>You score the lowest uncrossed value — so filling all parks on a street gives you the maximum.</p>
+
+        <p><strong>Pools</strong> — scored as a single total across all streets.</p>
+        <table>
+          <tr><th>Pools Built</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+          <tr><td>Points</td><td>0</td><td>3</td><td>6</td><td>9</td><td>13</td><td>17</td><td>21</td><td>27</td><td>33</td><td>36</td></tr>
+        </table>
+
+        <div class="tip">
+          <strong>Parks are free points</strong> — no penalty, no downside. Prioritize Landscaper when you can. Pools require the right number on the right space with the right effect — they're opportunistic, not a primary strategy.
+        </div>
+      </div>
+    </details>
+
+    <!-- 9. ADVANCED VARIANT: ROUNDABOUTS -->
+    <details>
+      <summary>🔄 Advanced Variant: Roundabouts</summary>
+      <div class="section-body">
+        <p>Before or after writing a house number, you may build a <strong>roundabout</strong> on any empty lot:</p>
+        <ol>
+          <li>Draw a circle (⊙) in an empty house space.</li>
+          <li>Place fences on both sides of the roundabout.</li>
+          <li>Cross off a roundabout penalty box (negative points at end of game).</li>
+        </ol>
+        <p>A roundabout <strong>splits a street into two independent sections</strong>. Each section can have the full range of house numbers (0–17). This effectively resets the ascending requirement.</p>
+
+        <div class="tip">
+          <strong>Roundabouts count as filled spaces</strong> for City Plans that require filling an entire street. They're a safety valve when you've painted yourself into a corner.
+        </div>
+
+        <div class="warning">
+          <strong>Roundabouts cost points.</strong> Each one you build increases your end-game penalty. Use them sparingly.
+        </div>
+      </div>
+    </details>
+
+    <!-- 10. EXPERT & SOLO MODES -->
+    <details>
+      <summary>🎓 Expert &amp; Solo Modes</summary>
+      <div class="section-body">
+        <p><strong>Expert Mode (drafting):</strong></p>
+        <ol>
+          <li>Combine all cards into one deck, effect-side up.</li>
+          <li>Deal 3 cards to each player.</li>
+          <li>Pick 2 cards: one for its house number, one for its effect. Discard both.</li>
+          <li>Pass the remaining card to the player on your right.</li>
+          <li>Deal 2 new cards to each player. Repeat.</li>
+        </ol>
+        <p>This adds drafting and more player interaction — you can see what you're passing and what's coming.</p>
+
+        <p><strong>Solo Mode:</strong></p>
+        <ol>
+          <li>Shuffle the solo card into the bottom half of the deck.</li>
+          <li>Draw 3 cards each turn. Pick 2 (one for number, one for effect). Discard all 3.</li>
+          <li>When the solo card appears, flip all uncompleted City Plans to their lower-scoring "approved" side.</li>
+          <li>Game also ends when the deck runs out.</li>
+          <li>6+ temps = 7 pts. Fewer than 6 = 0 pts.</li>
+        </ol>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Regrets – Rules Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<a href="../index.html" class="back-link">← All Games</a>
+
+<div class="game-header">
+  <div class="cover-banner"><img src="cover.webp" alt="Deep Regrets box cover"></div>
+  <h1>🎣 Deep Regrets</h1>
+  <p class="meta">Judson Cowan · Tettix Games · 2025 · 1–5 players · 30 min/player · Ages 16+</p>
+  <p class="meta">Push Your Luck · Dice Rolling · Set Collection · Market · Horror Fishing</p>
+  <div class="bgg-stats">
+    <div class="bgg-stat"><span class="bgg-value">7.8</span><span class="bgg-label">BGG Rating</span></div>
+    <div class="bgg-stat"><span class="bgg-value">2.3 <small>/ 5</small></span><span class="bgg-label">Weight</span></div>
+    <div class="bgg-stat"><span class="bgg-value">N/A</span><span class="bgg-label">BGG Rank</span></div>
+    <div class="bgg-stat"><span class="bgg-value">2–4</span><span class="bgg-label">Best</span></div>
+  </div>
+</div>
+
+<div class="expansion-nav">
+  <span class="expansion-nav-label">📦 Expansions</span>
+  <div class="expansion-pills">
+    <a href="expansions/lamentable-tentacles/index.html" class="expansion-pill">🦑 Lamentable Tentacles</a>
+    <a href="expansions/even-deeper-regrets/index.html" class="expansion-pill">🌊 Even Deeper Regrets</a>
+  </div>
+</div>
+
+<!-- ═══ TIER 1 ═══ -->
+
+<details open>
+  <summary>🃏 Player Aid Card</summary>
+  <div class="section-body">
+    <h3>Day Flow (6 rounds: Monday → Saturday)</h3>
+    <div class="flow-row">
+      <span class="flow-step">Roll Dice</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">+1 Energy</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step highlight">Choose: Sea or Port</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Take Actions</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Pass → Draw Dink</span>
+    </div>
+    <p>All players simultaneously reveal their Sea/Port choice. You're locked in for the round (exception: single-use lifeboat, which carries an end-game penalty).</p>
+
+    <h3>Key Numbers</h3>
+    <table>
+      <tr><th>Item</th><th>Value</th></tr>
+      <tr><td>Starting dice</td><td><span class="key-number">3</span> (custom lure-shaped dice)</td></tr>
+      <tr><td>Max dice (base)</td><td><span class="key-number">4</span> — increases with madness up to <span class="key-number">8</span></td></tr>
+      <tr><td>Fishing depths</td><td><span class="key-number">I</span> <span class="key-number">II</span> <span class="key-number">III</span> (3 shoals each = 3×3 grid)</td></tr>
+      <tr><td>Mount slots</td><td><span class="key-number">3</span> (×1, ×2, ×3 multiplier)</td></tr>
+      <tr><td>Game length</td><td><span class="key-number">6</span> days (Mon–Sat)</td></tr>
+    </table>
+
+    <h3>Sea vs Port Actions</h3>
+    <table>
+      <tr><th>At Sea 🌊</th><th>At Port ⚓</th></tr>
+      <tr><td>Fish at a depth (spend dice ≥ difficulty)</td><td>Sell fish for fishbucks</td></tr>
+      <tr><td>Eat a fish (discard for its ability)</td><td>Buy gear (rods, reels, supplies)</td></tr>
+      <tr><td>Use gear/supply abilities</td><td>Mount fish (lock into scoring slot)</td></tr>
+      <tr><td>Discard a die to fish deeper</td><td>Recharge energy</td></tr>
+      <tr><td colspan="2" style="text-align:center;color:var(--text-muted)">Pass → draw a Dink card (keep drawing if others still act)</td></tr>
+    </table>
+
+    <h3>Dice Mechanics</h3>
+    <p>At the start of each day, roll all your tackle dice and place them in your fresh pool. Spend dice whose total ≥ a fish's catch difficulty to reel it in. Higher-tier dice (bought at port) have higher face values. Dinks and gear can reduce difficulty or add virtual dice.</p>
+    <div class="tip">💡 A life preserver token rotates between players, granting a once-per-round discount on one catch.</div>
+  </div>
+</details>
+
+<details>
+  <summary>🏆 Scoring &amp; End Game</summary>
+  <div class="section-body">
+    <h3>Scoring Breakdown</h3>
+    <div class="score-flow">
+      <div class="score-box"><span class="score-icon">🖼️</span>Mounted Fish<br><span class="score-label">×1 / ×2 / ×3</span></div>
+      <span class="score-plus">+</span>
+      <div class="score-box"><span class="score-icon">🐟</span>Fish in Hand<br><span class="score-label">face value</span></div>
+      <span class="score-plus">+</span>
+      <div class="score-box"><span class="score-icon">💰</span>Fishbucks<br><span class="score-label">remaining $</span></div>
+      <span class="score-plus">+</span>
+      <div class="score-box"><span class="score-icon">🎯</span>Modifiers<br><span class="score-label">madness track</span></div>
+    </div>
+
+    <h3>Regret Penalty</h3>
+    <div class="warning">⚠️ After scoring, the player with the <strong>highest total regret value</strong> (sum of hidden card values) must discard their <strong>highest-scoring mounted fish</strong>. This can cost up to 27 points! Ties broken by turn order.</div>
+    <p>The number of regret cards is public, but their values (0–3 each) are hidden until end-game reveal.</p>
+
+    <h3>Tiebreaker</h3>
+    <p>If scores are tied, the player with fewer regret cards wins. If still tied, the player who passed first on the final day wins.</p>
+
+    <div class="tip">💡 Mounted fish are your biggest point source. Prioritize filling all 3 mount slots — especially the ×3 "prize catch" slot.</div>
+  </div>
+</details>
+
+<details>
+  <summary>⚙️ Quick Setup</summary>
+  <div class="section-body">
+    <ol>
+      <li><strong>Ocean Board:</strong> Place the 3×3 grid of face-down fish cards — 3 shoals per depth (I, II, III). Card backs show small/medium/large fish silhouettes.</li>
+      <li><strong>Port Board:</strong> Set up the market — deal rod, reel, and supply cards into their respective shops.</li>
+      <li><strong>Ocean Madness Board:</strong> Place each player's cube at the starting position (0 regrets).</li>
+      <li><strong>Player Boards:</strong> Each player takes a double-sided player board (both sides functionally identical), 3 starting tackle dice, and starting fishbucks.</li>
+      <li><strong>Decks:</strong> Shuffle Depth I, II, III fish decks separately. Shuffle the Dink deck, Regret deck, and gear decks (rods, reels, supplies).</li>
+      <li><strong>Life Preserver:</strong> Give to the starting player. Metal fish coin nearby for resolving card effects.</li>
+      <li><strong>Day Tracker:</strong> Set to Monday.</li>
+    </ol>
+    <div class="tip">💡 Card backs at each depth hint at fish size (small/medium/large). Use this to gauge risk before flipping!</div>
+  </div>
+</details>
+
+<details>
+  <summary>⚠️ Gotchas &amp; Common Mistakes</summary>
+  <div class="section-body">
+    <h3>Official Errata</h3>
+    <div class="warning">⚠️ <strong>Depth I Fair:Foul ratio</strong> is <strong>2:1</strong>, not 3:1 as printed in some rulebooks.</div>
+    <div class="warning">⚠️ <strong>Fish size corrections:</strong> Box Jellyfish = <strong>small</strong>, Corpse = <strong>large</strong>, Sockeye Salmon = <strong>small</strong>.</div>
+    <div class="warning">⚠️ <strong>Cycle market icon</strong> on reference cards should be <strong>ignored</strong>.</div>
+
+    <h3>Frequently Missed Rules</h3>
+    <ul>
+      <li><strong>Simultaneous choice:</strong> Sea/Port decisions are revealed at the same time — no peeking at others' choices first.</li>
+      <li><strong>Locked in:</strong> Once you choose Sea or Port, you stay there for the entire day (lifeboat is the only exception, and it costs a regret).</li>
+      <li><strong>Passing draws Dinks:</strong> When you pass, you draw a Dink. If you've already passed and others are still acting, you keep drawing additional Dinks each time it comes back to you.</li>
+      <li><strong>Regret count is public, value is secret:</strong> Everyone can see how many regret cards you have, but not what's on them (values 0–3).</li>
+      <li><strong>Selling foul fish = regret:</strong> Selling a foul fish at port earns you a regret card. Don't forget!</li>
+      <li><strong>Mounted fish are locked:</strong> Once mounted, a fish can't be removed or swapped (unless a card specifically breaks this rule).</li>
+      <li><strong>Regret deck empty?</strong> When the regret deck runs out, additional regrets must be stolen from other players — very swingy late-game!</li>
+      <li><strong>Eating fish:</strong> Discarding a fish for its ability means you lose its point value permanently.</li>
+    </ul>
+  </div>
+</details>
+
+<!-- ═══ TIER 2 ═══ -->
+
+<details>
+  <summary>🌊 Fishing at Sea (Detailed)</summary>
+  <div class="section-body">
+    <h3>Depth Mechanics</h3>
+    <p>The ocean board has a 3×3 grid of face-down fish card piles. Each row corresponds to a depth level:</p>
+    <table>
+      <tr><th>Depth</th><th>Fish Size</th><th>Difficulty</th><th>Fair:Foul Ratio</th><th>Risk/Reward</th></tr>
+      <tr><td><span class="key-number">I</span> Shallows</td><td>Mostly small</td><td>Low</td><td>2:1</td><td>Safe, low value</td></tr>
+      <tr><td><span class="key-number">II</span> Mid-waters</td><td>Mixed</td><td>Medium</td><td>~1:1</td><td>Balanced</td></tr>
+      <tr><td><span class="key-number">III</span> The Deep</td><td>Mostly large</td><td>High</td><td>More foul</td><td>High risk, high reward</td></tr>
+    </table>
+    <p>You can spend a die to move to a deeper depth during your turn. Card backs show silhouettes indicating small, medium, or large fish — use this to gauge risk before flipping.</p>
+
+    <h3>Catch Resolution</h3>
+    <ol>
+      <li><strong>Choose a shoal</strong> at your current depth (one of 3 piles).</li>
+      <li><strong>Flip the top card.</strong> Resolve any "on reveal" effects (e.g., Whiptail Stingray lets you reroll a die; some fish affect all players).</li>
+      <li><strong>Decide to catch or not.</strong> Spend dice whose total ≥ the fish's catch difficulty. Gear, dinks, and abilities can reduce difficulty.</li>
+      <li><strong>If you can't/won't catch:</strong> Draw a Dink card as consolation.</li>
+      <li><strong>If caught:</strong> Add to your hand. Resolve any "on catch" effects. Foul fish may trigger regret gains.</li>
+    </ol>
+
+    <h3>Fair vs Foul Fish</h3>
+    <p><span class="tag">Fair</span> Normal real-world fish (frilled shark, sockeye salmon, etc.). Worth more at low madness.</p>
+    <p><span class="tag">Foul</span> Eldritch horrors, body parts, mutants (psychic interloper, corpse, etc.). Worth more at high madness. Selling foul fish at port earns a regret.</p>
+
+    <h3>Dinks</h3>
+    <p>Tiny consolation fish drawn when you fail a catch or pass. They provide small bonuses — e.g., Shrimp reduces a fish's difficulty by 1. You keep drawing Dinks while passed if others are still acting.</p>
+
+    <div class="tip">💡 Some fish can be "eaten" (discarded from hand) to activate a special ability. Powerful, but you lose the fish's point value permanently.</div>
+    <div class="tip">💡 Interaction cards exist — e.g., the Tricky Squid gets gifted to another player when revealed. Event cards in the fish decks can shake things up for everyone.</div>
+  </div>
+</details>
+
+<details>
+  <summary>⚓ Port Actions (Detailed)</summary>
+  <div class="section-body">
+    <h3>Available Actions at Port</h3>
+    <table>
+      <tr><th>Action</th><th>Cost</th><th>Effect</th></tr>
+      <tr><td>Sell Fish</td><td>Spend a die</td><td>Gain fishbucks equal to the fish's current market value (modified by madness track)</td></tr>
+      <tr><td>Buy Gear</td><td>Fishbucks</td><td>Purchase rods, reels, or supplies from the market. Spend more $ to draw more cards and keep more (e.g., $5 → draw 5, keep 2)</td></tr>
+      <tr><td>Mount Fish</td><td>Spend a die</td><td>Lock a fish into one of 3 mount slots (×1, ×2, or ×3 multiplier). Cannot be removed once mounted.</td></tr>
+      <tr><td>Recharge Energy</td><td>Spend a die</td><td>Recover energy for abilities that require it</td></tr>
+      <tr><td>Buy Extra Dice</td><td>Fishbucks</td><td>Purchase one-use dice with higher face values for future days</td></tr>
+    </table>
+
+    <h3>Market Shops</h3>
+    <p>The port has separate shops for rods, reels, and supplies. Each has a face-up display. When you buy, you spend fishbucks and may draw multiple cards, keeping a subset.</p>
+
+    <div class="warning">⚠️ Selling foul fish earns you a regret card! Factor this into your sell decisions.</div>
+    <div class="tip">💡 Port days are precious — you're giving up a fishing day. Plan port trips to maximize gear purchases and mount your best catches.</div>
+    <div class="tip">💡 The value of unsold fish in your hand counts toward your final score. Don't sell everything!</div>
+  </div>
+</details>
+
+<details>
+  <summary>💀 Regret &amp; Madness System</summary>
+  <div class="section-body">
+    <h3>How Regret Is Gained</h3>
+    <ul>
+      <li>Catching certain foul fish or deep-sea horrors</li>
+      <li>Selling foul fish at port</li>
+      <li>Specific card effects and events</li>
+      <li>Using the emergency lifeboat (to switch from Sea to Port mid-round)</li>
+    </ul>
+    <p>Regret cards have a hidden value (0–3) and flavor text ranging from darkly funny ("Over-salted my breakfast" — 0) to sinister ("Partook of human flesh" — 3).</p>
+
+    <h3>Ocean Madness Track</h3>
+    <p>Each player has a cube on the shared Ocean Madness board. Gaining a regret card moves your cube down one level; discarding one moves it back up.</p>
+    <table>
+      <tr><th>Madness Level</th><th>Max Dice</th><th>Fair Fish Modifier</th><th>Foul Fish Modifier</th></tr>
+      <tr><td>0 (Sane)</td><td>4</td><td>+2</td><td>−2</td></tr>
+      <tr><td>Low</td><td>5</td><td>+1</td><td>−1</td></tr>
+      <tr><td>Mid</td><td>6</td><td>0</td><td>0</td></tr>
+      <tr><td>High</td><td>7</td><td>−1</td><td>+1</td></tr>
+      <tr><td>Max (Unhinged)</td><td>8</td><td>−2</td><td>+2</td></tr>
+    </table>
+
+    <h3>Strategic Tension</h3>
+    <p>More regrets = more dice = catch bigger fish, BUT foul fish become more valuable while fair fish lose value. And the player with the highest total regret value at end-game loses their best mounted fish.</p>
+
+    <div class="flow-row">
+      <span class="flow-step">Stay Sane</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Fair fish worth more</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Fewer dice</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step highlight">Safe but limited</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-step">Embrace Madness</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Foul fish worth more</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">More dice</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step highlight">Powerful but risky</span>
+    </div>
+
+    <h3>End-Game Regret Penalty</h3>
+    <div class="warning">⚠️ The player with the <strong>highest total regret value</strong> must discard their highest-scoring mounted fish. This can swing the game by up to 27 points. Ties broken by turn order.</div>
+    <p>Number of regret cards is always public. Values are hidden until the final reveal.</p>
+
+    <div class="tip">💡 When the regret deck runs out, additional regrets are stolen from other players — making late-game turns extremely swingy. Track the deck size!</div>
+  </div>
+</details>
+
+<!-- ═══ TIER 3 ═══ -->
+
+<details>
+  <summary>🎣 Gear Reference</summary>
+  <div class="section-body">
+    <p>Gear is purchased at port using fishbucks. Spend more to draw more cards and keep fewer (e.g., spend $5, draw 5, keep 2).</p>
+
+    <h3>Rods 🎣</h3>
+    <p>Ongoing passive abilities that improve your fishing. Rods stay equipped permanently once purchased.</p>
+    <ul>
+      <li>Reduce catch difficulty at certain depths</li>
+      <li>Grant bonus effects when catching specific fish types</li>
+      <li>Allow rerolls or dice manipulation</li>
+    </ul>
+
+    <h3>Reels 🔄</h3>
+    <p>Ongoing abilities that improve your catches and hand management.</p>
+    <ul>
+      <li>Increase the value of caught fish</li>
+      <li>Allow catching multiple fish per action</li>
+      <li>Provide discounts on mounting or selling</li>
+    </ul>
+
+    <h3>Supplies 📦</h3>
+    <p>One-time-use cards with powerful effects. Discarded after use.</p>
+    <ul>
+      <li>Instant dice bonuses or rerolls</li>
+      <li>Remove or transfer regret cards</li>
+      <li>Peek at face-down fish before committing</li>
+      <li>Various utility effects (energy recovery, market manipulation)</li>
+    </ul>
+
+    <div class="tip">💡 Rods and reels are investments — buy them early to benefit across multiple days. Supplies are tactical — save them for critical moments.</div>
+  </div>
+</details>
+
+<details>
+  <summary>🖼️ Mounting &amp; Fish Scoring</summary>
+  <div class="section-body">
+    <h3>Mount Slots</h3>
+    <p>Each player board has 3 mount slots with increasing multipliers:</p>
+    <table>
+      <tr><th>Slot</th><th>Multiplier</th><th>Notes</th></tr>
+      <tr><td>Slot 1</td><td>×1</td><td>No bonus — just locks the fish in for scoring</td></tr>
+      <tr><td>Slot 2</td><td>×2</td><td>Doubles the fish's value</td></tr>
+      <tr><td>Prize Catch</td><td>×3</td><td>Triples the fish's value — save your best fish for this!</td></tr>
+    </table>
+
+    <h3>Mounting Rules</h3>
+    <ul>
+      <li>Mounting is a port action — costs a die to perform</li>
+      <li>Once mounted, a fish is <strong>locked in</strong> and cannot be removed or swapped (unless a card specifically overrides this)</li>
+      <li>Mounted fish are scored at end-game with their multiplier applied</li>
+      <li>The regret penalty forces the most regretful player to discard their <strong>highest-scoring</strong> mounted fish (value × multiplier)</li>
+    </ul>
+
+    <h3>Fish Value Modifiers</h3>
+    <p>A fish's effective value depends on your position on the Ocean Madness track:</p>
+    <ul>
+      <li>At low madness: Fair fish get up to +2, Foul fish get −2</li>
+      <li>At high madness: Foul fish get up to +2, Fair fish get −2</li>
+    </ul>
+
+    <div class="warning">⚠️ Mount your ×3 fish carefully — if you end up with the most regret, that's the fish most likely to be discarded (highest score = value × multiplier).</div>
+    <div class="tip">💡 Fish still in your hand at end-game score at face value (no multiplier). Mounting is almost always better if you have the port time.</div>
+  </div>
+</details>
+
+<!-- ═══ TIER 4 ═══ -->
+
+<details>
+  <summary>🧑 Solo Mode</summary>
+  <div class="section-body">
+    <h3>Overview</h3>
+    <p>The solo/co-op mode casts you as an ichthyologist on a mission to catch and catalog every fish in the sea. It plays as a campaign-lite experience over multiple sessions.</p>
+
+    <h3>Setup Differences</h3>
+    <ul>
+      <li>Use the provided <strong>survey/catalog sheet</strong> (paper pad) to track discoveries</li>
+      <li>Specific mission objectives replace competitive scoring</li>
+      <li>No Ocean Madness competition — regret still matters but penalty works differently</li>
+      <li>Standard 6-day structure still applies</li>
+    </ul>
+
+    <h3>Campaign Goals</h3>
+    <ul>
+      <li>Catch and document every unique fish species across all 3 depths</li>
+      <li>Record fish attributes on the catalog sheet</li>
+      <li>Complete specific mission objectives each session</li>
+      <li>Upgrade gear across sessions to reach deeper, rarer catches</li>
+    </ul>
+
+    <div class="tip">💡 The solo mode is described as a cozy "gotta catch 'em all" experience — less competitive tension, more exploration and collection.</div>
+  </div>
+</details>
+
+</div>
+</body>
+</html>

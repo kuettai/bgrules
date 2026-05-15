@@ -1,0 +1,93 @@
+/* === Expansion Page — Welcome To…: Outbreak === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --card: #0f3460;
+  --accent: #e94560;
+  --text: #eee;
+  --text-muted: #aab;
+  --success: #53d769;
+  --warning: #f5a623;
+  --radius: 10px;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container { max-width: 800px; margin: 0 auto; padding: 2rem 1.25rem; }
+
+h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.back-link:hover { text-decoration: underline; }
+
+.cover-banner { text-align: center; margin-bottom: 1rem; }
+.cover-banner img { max-width: 100%; border-radius: var(--radius); }
+
+.meta { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+details {
+  background: var(--surface);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+summary::after { content: '▸'; transition: transform 0.2s; }
+details[open] > summary::after { transform: rotate(90deg); }
+summary::-webkit-details-marker { display: none; }
+
+details h3 { color: var(--accent); margin: 0.75rem 0 0.35rem; font-size: 1rem; }
+details ul, details ol { padding-left: 1.25rem; margin: 0.35rem 0; }
+details li { margin-bottom: 0.3rem; }
+details p { margin: 0.4rem 0; }
+
+.tip, .warning {
+  border-left: 4px solid;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  font-size: 0.92rem;
+}
+.tip { background: rgba(83,215,105,0.1); border-color: var(--success); }
+.warning { background: rgba(233,69,96,0.12); border-color: var(--accent); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  font-size: 0.92rem;
+}
+th, td { padding: 0.4rem 0.6rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); }
+th { color: var(--accent); font-weight: 600; }
+
+@media (max-width: 600px) {
+  .container { padding: 1rem 0.75rem; }
+  h1 { font-size: 1.5rem; }
+  details { padding: 0.75rem 1rem; }
+}

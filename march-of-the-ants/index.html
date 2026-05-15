@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>March of the Ants: Evolved Edition — Rules Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<a href="../index.html" class="back-link">← All Games</a>
+
+<div class="game-header">
+  <div class="cover-banner">
+    <img src="cover.webp" alt="March of the Ants: Evolved Edition box cover">
+  </div>
+  <h1>🐜 March of the Ants: Evolved Edition</h1>
+  <p class="meta">1–5 players · 60–90 min · 4X / Area Control · Ryan Swisher · Weird City Games (2025)</p>
+  <div class="bgg-stats">
+    <div class="bgg-stat"><span class="bgg-value">7.9</span><span class="bgg-label">BGG Rating</span></div>
+    <div class="bgg-stat"><span class="bgg-value">2.8<small>/5</small></span><span class="bgg-label">Weight</span></div>
+    <div class="bgg-stat"><span class="bgg-value">N/A</span><span class="bgg-label">BGG Rank</span></div>
+    <div class="bgg-stat"><span class="bgg-value">3–4</span><span class="bgg-label">Best At</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- TIER 1 — GRAB AND GO                      -->
+<!-- ══════════════════════════════════════════ -->
+
+<details open>
+  <summary>🃏 Player Aid Card</summary>
+  <div class="section-body">
+
+    <h3>Round Flow (4 Rounds = 4 Seasons)</h3>
+    <div class="flow-row">
+      <span class="flow-step highlight">👷 Worker Phase</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">⚔️ Soldier Phase</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">👑 Queen Phase</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">😴 Slumber</span>
+      <span class="flow-arrow">↻</span>
+    </div>
+
+    <h3>Actions at a Glance</h3>
+    <table>
+      <thead><tr><th>Action</th><th>Cost</th><th>Effect</th><th>Others' Reaction</th></tr></thead>
+      <tbody>
+        <tr><td>🔍 Explore</td><td>1 food</td><td>Place hex tile + 1 ant there</td><td>Place 1 larva in inhabited hex</td></tr>
+        <tr><td>🚶 March</td><td>1 food</td><td>Move up to 5 steps (+1/thorax)</td><td>Move 1 ant 1 step</td></tr>
+        <tr><td>🃏 Forage</td><td>1 food</td><td>Draw 2 cards</td><td>Gain 1 larva</td></tr>
+        <tr><td>🎴 Play Card</td><td>Larvae/Ants</td><td>Play 1 Event / Evolution / Goal</td><td>Discard 1 → Draw 1</td></tr>
+        <tr><td>💤 Rest</td><td>Free</td><td>1st rest = 1 larva; later = 1 food</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="tip">💡 Worker Phase ends when <strong>2 players rest</strong> (3 in a 5p game). The 2nd player to rest becomes next start player.</div>
+
+    <h3>Key Numbers</h3>
+    <table>
+      <tbody>
+        <tr><td>Starting resources</td><td><span class="key-number">5</span> larvae, <span class="key-number">2</span> food, <span class="key-number">2</span> cards, <span class="key-number">1</span> ant in Great Tunnel</td></tr>
+        <tr><td>March steps</td><td><span class="key-number">5</span> base + 1 per thorax evolution</td></tr>
+        <tr><td>Feeding ratio</td><td><span class="key-number">1</span> food feeds <span class="key-number">4</span> ants + 1 per abdomen evolution</td></tr>
+        <tr><td>Complete ant body</td><td>Head + Thorax + Abdomen = <span class="key-number">3</span> CP immediately</td></tr>
+        <tr><td>Royal Decree</td><td><span class="key-number">2</span> food OR <span class="key-number">5</span> larvae (not in final round)</td></tr>
+        <tr><td>Game length</td><td><span class="key-number">4</span> rounds (seasons)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Card Anatomy — Evolution Body Segments</h3>
+    <div class="svg-diagram">
+      <svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" style="max-width:520px">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e94560"/><stop offset="100%" stop-color="#b8354d"/></linearGradient>
+          <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#53d769"/><stop offset="100%" stop-color="#3aad50"/></linearGradient>
+          <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5a623"/><stop offset="100%" stop-color="#d08c1a"/></linearGradient>
+        </defs>
+        <!-- Head -->
+        <rect x="10" y="10" width="150" height="120" rx="12" fill="url(#hg)" opacity="0.25" stroke="#e94560" stroke-width="2"/>
+        <text x="85" y="40" text-anchor="middle" fill="#e94560" font-weight="700" font-size="15">🧠 HEAD</text>
+        <text x="85" y="62" text-anchor="middle" fill="#eee" font-size="11">+1 Army Strength</text>
+        <text x="85" y="78" text-anchor="middle" fill="#eee" font-size="11">per battle</text>
+        <text x="85" y="105" text-anchor="middle" fill="#aab" font-size="10">(cumulative per card)</text>
+        <!-- Thorax -->
+        <rect x="185" y="10" width="150" height="120" rx="12" fill="url(#tg)" opacity="0.25" stroke="#53d769" stroke-width="2"/>
+        <text x="260" y="40" text-anchor="middle" fill="#53d769" font-weight="700" font-size="15">🦵 THORAX</text>
+        <text x="260" y="62" text-anchor="middle" fill="#eee" font-size="11">+1 March step</text>
+        <text x="260" y="78" text-anchor="middle" fill="#eee" font-size="11">per March action</text>
+        <text x="260" y="105" text-anchor="middle" fill="#aab" font-size="10">(cumulative per card)</text>
+        <!-- Abdomen -->
+        <rect x="360" y="10" width="150" height="120" rx="12" fill="url(#ag)" opacity="0.25" stroke="#f5a623" stroke-width="2"/>
+        <text x="435" y="40" text-anchor="middle" fill="#f5a623" font-weight="700" font-size="15">🍯 ABDOMEN</text>
+        <text x="435" y="62" text-anchor="middle" fill="#eee" font-size="11">+1 ant fed</text>
+        <text x="435" y="78" text-anchor="middle" fill="#eee" font-size="11">per food spent</text>
+        <text x="435" y="105" text-anchor="middle" fill="#aab" font-size="10">(cumulative per card)</text>
+      </svg>
+    </div>
+    <div class="warning">⚠️ Only the <strong>topmost</strong> evolution in each segment is active. New evolutions stack on top, covering the old ability. Caste bonuses (the +1s) are cumulative per card in that column.</div>
+
+  </div>
+</details>
+
+
+<details>
+  <summary>🏆 Scoring &amp; End Game</summary>
+  <div class="section-body">
+
+    <h3>Scoring Sources</h3>
+    <div class="score-flow">
+      <div class="score-box"><span class="score-icon">⚔️</span>1 CP<span class="score-label">per battle won</span></div>
+      <div class="score-box"><span class="score-icon">🧬</span>3 CP<span class="score-label">complete ant body</span></div>
+      <div class="score-box"><span class="score-icon">🏠</span>1 CP<span class="score-label">per Inner Meadow hex (each Slumber)</span></div>
+      <div class="score-box"><span class="score-icon">🎯</span>Varies<span class="score-label">Colony Goals (each Slumber)</span></div>
+      <div class="score-box"><span class="score-icon">🗺️</span>Varies<span class="score-label">CP collection sites (Harvest)</span></div>
+      <div class="score-box"><span class="score-icon">🎴</span>Varies<span class="score-label">card effects</span></div>
+    </div>
+
+    <h3>End-of-Game Bonuses (after Round 4)</h3>
+    <table>
+      <thead><tr><th>Award</th><th>Condition</th><th>Points</th></tr></thead>
+      <tbody>
+        <tr><td>🐛 Largest Brood</td><td>Most larvae</td><td>3 CP (tie = 1 CP each)</td></tr>
+        <tr><td>🍖 Greatest Stores</td><td>Most food</td><td>3 CP (tie = 1 CP each)</td></tr>
+        <tr><td>🃏 Untold Potential</td><td>Most cards in hand</td><td>3 CP (tie = 1 CP each)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Tiebreaker</h3>
+    <p>If tied on total CP → player with the <strong>most ants in the Meadow</strong> wins.</p>
+
+    <div class="tip">💡 Hoard resources for end-game bonuses, but don't neglect in-game scoring — 3 CP per category is significant but not decisive alone.</div>
+  </div>
+</details>
+
+<details>
+  <summary>⚙️ Quick Setup</summary>
+  <div class="section-body">
+    <ol>
+      <li>Place the <strong>Great Tunnel</strong> hex in the center of the table.</li>
+      <li>Each player takes a <strong>Nest Mat</strong> and cubes in their color.</li>
+      <li>Each player draws <strong>1 random starting hex</strong> (gold border), places it connected to the Great Tunnel.</li>
+      <li>Each player places <strong>1 ant</strong> from supply into the Great Tunnel.</li>
+      <li>Each player starts with: <span class="key-number">5</span> larvae in chamber, <span class="key-number">2</span> food in stores, <span class="key-number">2</span> cards in hand.</li>
+      <li>Separate <strong>centipede-icon cards</strong> → set aside (used for centipede battles &amp; solo mode).</li>
+      <li>Shuffle remaining cards into the <strong>player deck</strong>.</li>
+      <li>Shuffle hex tiles into a face-down stack.</li>
+      <li>Place round marker on <strong>Round 1 (Spring)</strong>.</li>
+      <li>Randomly determine start player → give Active Player Marker.</li>
+    </ol>
+    <div class="warning">⚠️ 2-player setup is different: use reverse Great Tunnel, each player gets 2 random starting hexes (choose 1), start with <strong>3 ants</strong> in placed hex, <strong>3 larvae</strong>, 2 food, 2 cards.</div>
+    <div class="tip">💡 Solo setup: 1 starting hex with 3 ants, 3 larvae, 2 food, <strong>4 cards</strong>. Create separate Centipede Deck from centipede-icon cards.</div>
+  </div>
+</details>
+
+<details>
+  <summary>⚠️ Gotchas &amp; Common Mistakes</summary>
+  <div class="section-body">
+    <ol>
+      <li><strong>Play Card costs larvae/ants, NOT food.</strong> Every other action costs 1 food, but playing a card is paid with larvae or ants as shown on the card.</li>
+      <li><strong>Rest is free but restricted.</strong> You cannot rest as your first action of the round unless you have no cards AND no food.</li>
+      <li><strong>Reactions are free.</strong> Other players don't pay food for reactions — they happen automatically after the active player's action.</li>
+      <li><strong>Only the topmost evolution is active.</strong> When you stack a new evolution on a body segment, the old ability is covered. But caste bonuses (+1 per card in column) are cumulative.</li>
+      <li><strong>Defender wins ties in battle.</strong> The player who controls (inhabits) a collection site in the hex is the defender.</li>
+      <li><strong>Winner takes casualties too!</strong> Winner loses ants equal to <em>half</em> the loser's strength (rounded down). Don't forget this.</li>
+      <li><strong>Contested ≠ Shared.</strong> A hex is only contested if 2+ players have ants in the outskirts. If everyone is on collection sites, it's shared — no battle.</li>
+      <li><strong>Great Tunnel is safe.</strong> No battles ever happen in the Great Tunnel. It's never contested.</li>
+      <li><strong>Unfed ants eat larvae first.</strong> If you can't feed ants with food, each unfed ant consumes 1 larva. Only if no larvae remain are ants destroyed.</li>
+      <li><strong>Royal Decree skipped in final round.</strong> In Round 4 (or Rounds 3–4 in Long Game), there is no Royal Decree.</li>
+      <li><strong>March moves larvae first.</strong> Larvae move from chamber to an inhabited hex, then ants move between connected hexes. Order matters.</li>
+      <li><strong>Wormholes connect to ALL wormholes.</strong> An ant can move between any two wormhole hexes in a single step — they don't need to be adjacent.</li>
+      <li><strong>Colony Goals score EACH Slumber.</strong> They're not one-time — if you meet the condition every round, you score every round.</li>
+      <li><strong>Complete ant body = immediate 3 CP.</strong> As soon as you have at least one card in Head + Thorax + Abdomen, score 3 CP right then. You don't score again for the same body.</li>
+    </ol>
+  </div>
+</details>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- TIER 2 — PHASE REFERENCE                  -->
+<!-- ══════════════════════════════════════════ -->
+
+<details>
+  <summary>👷 Worker Phase — Detailed</summary>
+  <div class="section-body">
+    <p>Players take turns clockwise. The active player performs <strong>1 action</strong>, then each other player may perform a <strong>Reaction</strong> (free). Play continues until 2 players have rested (3 in 5p).</p>
+
+    <h3>🔍 Explore (1 food)</h3>
+    <ol>
+      <li>Draw the top hex tile from the stack.</li>
+      <li>Place it adjacent to any existing hex — tunnels must connect.</li>
+      <li>Place 1 ant from your supply into the new hex.</li>
+    </ol>
+    <p><strong>Reaction:</strong> Each other player may place 1 larva from their chamber into any hex they already inhabit.</p>
+    <div class="tip">💡 Exploring is how you grow the map and claim territory early. The ant you place can immediately inhabit a collection site on the new hex.</div>
+
+    <h3>🚶 March (1 food)</h3>
+    <ol>
+      <li><strong>Larvae first:</strong> Move larvae from your chamber to any hex you inhabit (these count as steps).</li>
+      <li><strong>Then ants:</strong> Move ants between adjacent hexes connected by tunnels.</li>
+      <li>Total movement: up to <span class="key-number">5</span> steps + 1 per thorax evolution card.</li>
+      <li>Each ant/larva moved 1 hex = 1 step. You can split steps among multiple units.</li>
+    </ol>
+    <p><strong>Reaction:</strong> Each other player may move 1 ant 1 step.</p>
+    <div class="warning">⚠️ Larvae can only move FROM the chamber TO a hex you inhabit. They cannot move hex-to-hex. Ants move between connected hexes only (unless you have Tunneling or Flying Thorax).</div>
+
+    <h3>🃏 Forage (1 food)</h3>
+    <p>Draw 2 cards from the player deck.</p>
+    <p><strong>Reaction:</strong> Each other player gains 1 larva (placed in their chamber).</p>
+
+    <h3>🎴 Play a Card (costs larvae/ants — NOT food)</h3>
+    <p>Play 1 card from your hand. Pay its cost in larvae and/or ants as shown on the card.</p>
+    <ul>
+      <li><strong>Event:</strong> One-time effect, then discarded.</li>
+      <li><strong>Evolution:</strong> Placed on a body segment (Head/Thorax/Abdomen) of your Nest Mat. Stacks on top of existing evolutions.</li>
+      <li><strong>Colony Goal:</strong> Placed face-up near your Nest Mat. Max 2 active goals at a time.</li>
+    </ul>
+    <p><strong>Reaction:</strong> Each other player may discard 1 card to draw 1 card.</p>
+
+    <h3>💤 Rest (free)</h3>
+    <ul>
+      <li><strong>First rest of the round:</strong> Gain 1 larva.</li>
+      <li><strong>Each subsequent rest:</strong> Gain 1 food.</li>
+      <li>You <strong>cannot</strong> rest as your first action unless you have no cards AND no food.</li>
+      <li>Worker Phase ends when <strong>2 players have rested</strong> (3 in 5p game).</li>
+      <li>The 2nd player to rest becomes the <strong>next start player</strong>.</li>
+    </ul>
+    <div class="warning">⚠️ In a 2-player game: after one player rests, the other gets <strong>one final turn</strong> (any action, including rest), then the Worker Phase ends. That player keeps the Active Player Marker.</div>
+    <div class="tip">💡 Resting early gives you a larva but ends the phase sooner. Resting late lets you take more actions but your opponents may force the phase to end.</div>
+  </div>
+</details>
+
+<details>
+  <summary>⚔️ Soldier Phase — Detailed</summary>
+  <div class="section-body">
+    <p>Resolve battles in <strong>all contested hexes</strong>. A hex is contested when it has ants from 2+ players AND at least one player has ants in the outskirts (not on a collection site).</p>
+
+    <h3>Battle Resolution (5 Stages)</h3>
+
+    <div class="battle-stage">
+      <strong>1. Army Strength</strong><br>
+      Count your ants in the hex + your Head caste bonus (+1 per Head evolution card in your stack).
+    </div>
+
+    <div class="battle-stage">
+      <strong>2. Ferocity</strong><br>
+      Each player in the battle may <em>secretly</em> choose 1 card from hand to discard. All chosen cards are revealed simultaneously. Add the ferocity value (number in top-left of card) to your Army Strength.
+    </div>
+
+    <div class="battle-stage">
+      <strong>3. Outcome</strong><br>
+      Highest total wins. <strong>Defender wins ties.</strong> (Defender = player who controls/inhabits a collection site in that hex.)
+    </div>
+
+    <div class="battle-stage">
+      <strong>4. Casualties</strong><br>
+      <strong>Loser</strong> loses ants equal to the <em>winner's</em> total strength.<br>
+      <strong>Winner</strong> loses ants equal to <em>half</em> the loser's total strength (rounded down).<br>
+      <em>Lone Survivor Rule:</em> If casualties would destroy all ants on both sides, the winner keeps 1 ant.
+    </div>
+
+    <div class="battle-stage">
+      <strong>5. Spoils</strong><br>
+      Winner gains <span class="key-number">1</span> CP. Winner may move surviving ants to inhabit any empty collection sites in the hex.
+    </div>
+
+    <h3>🐛 Centipede Battles</h3>
+    <p>When ants share a hex with a centipede token, battle occurs.</p>
+    <ul>
+      <li>Centipede flips <strong>2 cards</strong> from the centipede deck for its Army Strength (uses ferocity values).</li>
+      <li><strong>If ants win:</strong> Destroy the centipede token. Gain 1 food + 1 CP.</li>
+      <li><strong>If centipede wins:</strong> Lose ants equal to the centipede's <em>full</em> strength (not halved).</li>
+    </ul>
+    <div class="warning">⚠️ Centipede casualties are NOT halved — you lose ants equal to the centipede's full strength if you lose. High risk, high reward.</div>
+
+    <h3>Multi-Player Hex Battles</h3>
+    <p>If 3+ players are in a contested hex, resolve battles pairwise. The defender (site controller) fights each attacker. Multiple battles may occur in the same hex.</p>
+  </div>
+</details>
+
+<details>
+  <summary>👑 Queen Phase — Detailed</summary>
+  <div class="section-body">
+
+    <h3>Step 1: Harvest</h3>
+    <p>Collect resources from <strong>all collection sites you inhabit</strong> across the entire Meadow. Each site shows its resource: food, larvae, cards, or CPs.</p>
+    <div class="tip">💡 You must have an ant ON the collection site to harvest from it. Ants in the outskirts of a hex don't collect anything.</div>
+
+    <h3>Step 2: Feed Ants</h3>
+    <p>Count all your ants on the board (not larvae). Feed them:</p>
+    <table>
+      <thead><tr><th>Formula</th><th>Base</th><th>With Abdomen Evolutions</th></tr></thead>
+      <tbody>
+        <tr><td>1 food feeds…</td><td>4 ants</td><td>4 + 1 per abdomen card in stack</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Unfed ants:</strong></p>
+    <ol>
+      <li>Each unfed ant eats <strong>1 larva</strong> from your chamber.</li>
+      <li>If no larvae remain, unfed ants are <strong>destroyed</strong> (returned to supply).</li>
+    </ol>
+    <div class="warning">⚠️ Feeding is mandatory. Over-expanding without food production will devastate your colony. Plan your food economy!</div>
+
+    <h3>Step 3: Royal Decree</h3>
+    <p>Each player chooses one:</p>
+    <ul>
+      <li><span class="key-number">2</span> food, OR</li>
+      <li><span class="key-number">5</span> larvae</li>
+    </ul>
+    <div class="warning">⚠️ <strong>No Royal Decree in the final round</strong> (Round 4). In the Long Game variant, no Royal Decree in Rounds 3–4.</div>
+
+    <h3>Step 4: Slumber</h3>
+    <ol>
+      <li>Score <span class="key-number">1</span> CP for each <strong>Inner Meadow hex</strong> you control (hexes adjacent to the Great Tunnel).</li>
+      <li>Score all active <strong>Colony Goals</strong> that meet their conditions.</li>
+      <li>Advance the round marker.</li>
+    </ol>
+    <div class="tip">💡 Inner Meadow hexes are the most valuable territory — they score every single round during Slumber. Prioritize controlling them.</div>
+  </div>
+</details>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- TIER 3 — SUBSYSTEM REFERENCES             -->
+<!-- ══════════════════════════════════════════ -->
+
+<details>
+  <summary>🧬 Evolution &amp; Card Types</summary>
+  <div class="section-body">
+
+    <h3>Three Card Types</h3>
+    <table>
+      <thead><tr><th>Type</th><th>How It Works</th><th>Cost</th></tr></thead>
+      <tbody>
+        <tr><td>🎴 Event</td><td>One-time powerful effect → discarded after use</td><td>Larvae/Ants</td></tr>
+        <tr><td>🧬 Evolution</td><td>Permanent ability — placed on a body segment</td><td>Larvae/Ants</td></tr>
+        <tr><td>🎯 Colony Goal</td><td>Ongoing scoring condition — checked each Slumber</td><td>Larvae/Ants</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Evolution Body Segments</h3>
+    <table>
+      <thead><tr><th>Segment</th><th>Active Ability</th><th>Caste Bonus (per card)</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#e94560">🧠 Head</td><td>Unique combat/control ability (topmost only)</td><td>+1 Army Strength per battle</td></tr>
+        <tr><td style="color:#53d769">🦵 Thorax</td><td>Unique movement/explore ability (topmost only)</td><td>+1 March step</td></tr>
+        <tr><td style="color:#f5a623">🍯 Abdomen</td><td>Unique economy/harvest ability (topmost only)</td><td>+1 ant fed per food</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Stacking Rules</h3>
+    <ul>
+      <li>New evolutions <strong>stack on top</strong> of existing ones in the same segment.</li>
+      <li>Only the <strong>topmost card's ability</strong> is active.</li>
+      <li><strong>Caste bonuses are cumulative</strong> — count ALL cards in the stack, not just the top one.</li>
+      <li>Example: 3 Head evolutions = topmost ability active + <strong>+3 Army Strength</strong> in every battle.</li>
+    </ul>
+
+    <h3>Complete Ant Body</h3>
+    <p>When you have at least 1 evolution in <strong>all three segments</strong> (Head + Thorax + Abdomen), you immediately score <span class="key-number">3</span> CP. This is a one-time bonus per body completion.</p>
+    <div class="tip">💡 Completing your ant body early gives you 3 CP plus ongoing caste bonuses in all three categories. It's a strong opening strategy.</div>
+
+    <h3>Cards as Ferocity</h3>
+    <p>Every card has a <strong>ferocity value</strong> (top-left corner). During battle, you may secretly discard a card to add its ferocity to your Army Strength. This creates tension: play cards for abilities or save them for combat?</p>
+
+    <h3>Notable Evolution Cards</h3>
+    <table>
+      <thead><tr><th>Card</th><th>Segment</th><th>Key Effect</th></tr></thead>
+      <tbody>
+        <tr><td>Acrobat Head</td><td>🧠</td><td>Move ants during Soldier Phase (may change contested status)</td></tr>
+        <tr><td>Amazon Head</td><td>🧠</td><td>Gain 2 larvae when winning a battle</td></tr>
+        <tr><td>Armored Head</td><td>🧠</td><td>Reduce casualties by 1</td></tr>
+        <tr><td>Blasting Head</td><td>🧠</td><td>Destroy any player's ants in a hex (may prevent battle)</td></tr>
+        <tr><td>Trapjaw Head</td><td>🧠</td><td>Gain 1 CP per hex you battle in</td></tr>
+        <tr><td>Traitorous Head</td><td>🧠</td><td>Gain 1 CP per centipede in Meadow each Soldier Phase</td></tr>
+        <tr><td>Flying Thorax</td><td>🦵</td><td>Move ants to any hex (not just adjacent)</td></tr>
+        <tr><td>Tunneling Thorax</td><td>🦵</td><td>Move between adjacent hexes ignoring tunnel connections</td></tr>
+        <tr><td>Scouting Thorax</td><td>🦵</td><td>Look at hex before placing when exploring</td></tr>
+        <tr><td>Weaver Thorax</td><td>🦵</td><td>Opponents can't move ants OUT of hexes you inhabit</td></tr>
+        <tr><td>Red Harvester Thorax</td><td>🦵</td><td>Gain 1 larva from each larva site after exploring</td></tr>
+        <tr><td>Honeypot Abdomen</td><td>🍯</td><td>Collect twice from one collection site during Harvest</td></tr>
+        <tr><td>Leaf Cutter Abdomen</td><td>🍯</td><td>Convert any collection site to food during Harvest</td></tr>
+        <tr><td>Carpenter Abdomen</td><td>🍯</td><td>Move ants after Harvest (can enter centipede hexes)</td></tr>
+        <tr><td>Thief Abdomen</td><td>🍯</td><td>Increase opponents' feeding cost by 1; reduce yours by 1 per opponent</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<details>
+  <summary>🗺️ Hex &amp; Map Rules</summary>
+  <div class="section-body">
+
+    <h3>Hex Anatomy</h3>
+    <p>Each hex tile may contain:</p>
+    <ul>
+      <li><strong>Collection sites</strong> — spaces that produce resources (food, larvae, cards, or CPs) during Harvest.</li>
+      <li><strong>Outskirts</strong> — the area outside collection sites. Ants here don't collect resources.</li>
+      <li><strong>Tunnel connections</strong> — edges that connect to adjacent hexes for movement.</li>
+      <li><strong>Special icons</strong> — centipedes, wormholes, or unique effects.</li>
+    </ul>
+
+    <h3>Inhabiting &amp; Controlling</h3>
+    <ul>
+      <li>Place an ant ON a collection site to <strong>inhabit</strong> it → collect its resource during Harvest.</li>
+      <li>The player inhabiting a site is the <strong>controller/defender</strong> in battles.</li>
+      <li>Multiple players can inhabit <em>different</em> sites on the same hex (shared hex).</li>
+    </ul>
+
+    <h3>Contested vs. Shared</h3>
+    <table>
+      <thead><tr><th>Status</th><th>Condition</th><th>Battle?</th></tr></thead>
+      <tbody>
+        <tr><td>Contested</td><td>2+ players present AND at least 1 player has ants in outskirts</td><td>Yes — Soldier Phase</td></tr>
+        <tr><td>Shared</td><td>2+ players inhabiting sites, no ants in outskirts</td><td>No battle</td></tr>
+        <tr><td>Controlled</td><td>Only 1 player present</td><td>No battle</td></tr>
+      </tbody>
+    </table>
+    <div class="warning">⚠️ A hex becomes contested when there are more ants than collection sites AND 2+ players are present. Excess ants spill into the outskirts.</div>
+
+    <h3>The Great Tunnel</h3>
+    <ul>
+      <li>Central hex where all players start.</li>
+      <li><strong>Never contested</strong> — no battles ever occur here.</li>
+      <li>All hexes connect to it. It's the hub of the tunnel network.</li>
+    </ul>
+
+    <h3>Inner Meadow</h3>
+    <p>Hexes <strong>adjacent to the Great Tunnel</strong>. These score <span class="key-number">1</span> CP each during every Slumber phase. The most valuable real estate on the board.</p>
+
+    <h3>Wormholes</h3>
+    <ul>
+      <li>Some hexes contain wormhole tokens.</li>
+      <li>Ants can move between <strong>any two wormhole hexes</strong> in a single step — they don't need to be adjacent.</li>
+      <li>Max 1 wormhole per hex.</li>
+    </ul>
+
+    <h3>Centipede Tokens</h3>
+    <ul>
+      <li>Some hexes spawn centipede tokens when explored.</li>
+      <li>Centipedes block collection sites and trigger battles.</li>
+      <li>Defeating a centipede: gain 1 food + 1 CP, remove the token.</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary>🎯 Colony Goals</summary>
+  <div class="section-body">
+    <h3>How Colony Goals Work</h3>
+    <ul>
+      <li>Played as an action during the Worker Phase (costs larvae/ants, not food).</li>
+      <li>Maximum <strong>2 Colony Goals</strong> active at a time per player.</li>
+      <li>Scored during <strong>each Slumber</strong> — if you meet the condition, you gain the CP.</li>
+      <li>Goals are ongoing — they score every round you qualify, not just once.</li>
+    </ul>
+
+    <h3>Known Colony Goal Cards</h3>
+    <table>
+      <thead><tr><th>Goal</th><th>Condition / Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Bound to the Past</td><td>Most ants in the Great Tunnel. No points if tied.</td></tr>
+        <tr><td>Epic Stores</td><td>More food than both neighbors (left &amp; right). No points if tied.</td></tr>
+        <tr><td>Grand Evolution</td><td>More evolution cards than both neighbors. No points if tied.</td></tr>
+        <tr><td>Unending Brood</td><td>More larvae than both neighbors. No points if tied.</td></tr>
+        <tr><td>Eyeless Overlords</td><td>Related to wormhole control. Max 1 wormhole per hex.</td></tr>
+        <tr><td>Outlander</td><td>Rewards presence in distant hexes. Moving ant is optional.</td></tr>
+        <tr><td>Nurturing Hive</td><td>Rewards inhabiting single-larva collection sites. Moving ant is optional.</td></tr>
+        <tr><td>Xenophobic Tribe</td><td>Place larvae from chamber when conditions met. Must have larvae available.</td></tr>
+      </tbody>
+    </table>
+    <div class="tip">💡 "Neighbor" goals (Epic Stores, Grand Evolution, Unending Brood) compare only to the players immediately to your left and right. In a 2-player game, your only neighbor is the other player.</div>
+    <div class="warning">⚠️ You can never have more than 2 Colony Goals active. If you want a new one, you must first discard an existing goal.</div>
+  </div>
+</details>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- TIER 4 — VARIANTS                         -->
+<!-- ══════════════════════════════════════════ -->
+
+<details>
+  <summary>🧑 Solo Mode — Rise of the Centipedes</summary>
+  <div class="section-body">
+    <p>A solitaire (or cooperative) mode where you battle an invading <strong>Centipede Horde</strong> overrunning the Meadow. You must defend the Great Tunnel.</p>
+
+    <h3>Setup Changes</h3>
+    <ul>
+      <li>Use the <strong>reverse side</strong> of the Great Tunnel.</li>
+      <li>Remove centipede-icon cards → shuffle into a separate <strong>Centipede Deck</strong>.</li>
+      <li>Start with 1 random starting hex with <strong>3 ants</strong>, <strong>3 larvae</strong>, <strong>2 food</strong>, <strong>4 cards</strong>.</li>
+    </ul>
+
+    <h3>Centipede Actions</h3>
+    <p>After each of your turns in the Worker Phase, reveal 1 card from the Centipede Deck:</p>
+    <table>
+      <thead><tr><th>Card Type Revealed</th><th>Centipede Action</th></tr></thead>
+      <tbody>
+        <tr><td>🧬 Evolution</td><td><strong>Invade:</strong> Place a centipede on the highest-numbered hex without one. If all hexes full → centipede enters Great Tunnel.</td></tr>
+        <tr><td>🎴 Event</td><td><strong>Advance:</strong> Centipede on lowest-numbered hex jumps toward lower numbers (# of jumps = card value). If no lower hex → enters Great Tunnel.</td></tr>
+        <tr><td>🎯 Colony Goal</td><td><strong>Rampage:</strong> Centipede battle in EVERY hex with both ants and a centipede. Each centipede gets +1 Army Strength during Rampage.</td></tr>
+      </tbody>
+    </table>
+    <div class="warning">⚠️ Whenever a centipede enters the Great Tunnel, the Horde gains CP equal to the <strong>number of players</strong>. Centipedes in the Great Tunnel <strong>cannot be battled</strong> and score every Slumber.</div>
+
+    <h3>Centipede Sentry</h3>
+    <p>If an Event card is revealed but no centipedes exist to move: explore a new hex anywhere in the Meadow and place a centipede on it. If that hex has a centipede icon, reveal another centipede card.</p>
+
+    <h3>Combat Differences</h3>
+    <ul>
+      <li>After taking a March action, you may initiate a centipede battle in one hex.</li>
+      <li>Centipedes draw from the Centipede Deck for Army Strength.</li>
+    </ul>
+
+    <h3>Scoring &amp; Winning</h3>
+    <ul>
+      <li>Centipede Horde gains CP: each Slumber (per centipede in Meadow + Great Tunnel), each battle won, each Great Tunnel entry.</li>
+      <li><strong>No end-of-game bonuses</strong> for most food/larvae/cards.</li>
+      <li>If the Horde's CP exceeds yours at game end → <strong>you lose</strong>.</li>
+    </ul>
+
+    <h3>Difficulty Levels</h3>
+    <table>
+      <tbody>
+        <tr><td>Easy</td><td>Start with 3 additional larvae in your chamber</td></tr>
+        <tr><td>Normal</td><td>Standard solo setup (3 ants, 3 larvae, 2 food, 4 cards)</td></tr>
+        <tr><td>Hard</td><td>Start with only 2 cards in hand (instead of 4)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Worker Phase End (Solo)</h3>
+    <p>After you rest, the Centipede reveals <strong>1 final card</strong>, then the Worker Phase ends.</p>
+  </div>
+</details>
+
+<details>
+  <summary>👥 2-Player Variant</summary>
+  <div class="section-body">
+    <h3>Setup Changes</h3>
+    <ul>
+      <li>Use the <strong>reverse side</strong> of the Great Tunnel.</li>
+      <li>Each player takes <strong>2 random unused starting hexes</strong> → choose 1 to place connected to the Great Tunnel.</li>
+      <li>Start with <strong>3 ants</strong> in the placed hex, <strong>3 larvae</strong>, 2 food, 2 cards.</li>
+    </ul>
+
+    <h3>Resting (2-Player)</h3>
+    <p>After one player rests, the other player gets <strong>one final turn</strong> (any action, including rest). That player keeps the Active Player Marker and becomes the Starting Player next round.</p>
+
+    <h3>Inner Meadow Scoring</h3>
+    <p>Inner Meadow hexes must be <strong>connected by tunnels</strong> to the Great Tunnel to score during Slumber. (In 3-5 player games, adjacency alone is sufficient.)</p>
+
+    <h3>Colony Goals</h3>
+    <p>"Neighbor" goals compare only to the other player (since you each have only 1 neighbor).</p>
+
+    <div class="tip">💡 The 2-player game is tighter and more aggressive. With fewer players competing for hexes, direct conflict is more common. Plan your military strength accordingly.</div>
+  </div>
+</details>
+
+<details>
+  <summary>👥 5-Player Variant</summary>
+  <div class="section-body">
+    <h3>Setup</h3>
+    <p>Include all <strong>8 starting hex tiles</strong>.</p>
+
+    <h3>Reactions</h3>
+    <p>Only your <strong>immediate neighbors</strong> (players to your left and right) may take Reactions to your actions. Card effects that target "all players" still affect everyone.</p>
+
+    <h3>Resting</h3>
+    <p>Worker Phase continues until <strong>3 players rest</strong> (instead of 2). The 3rd player to rest becomes the next Starting Player.</p>
+  </div>
+</details>
+
+<details>
+  <summary>📏 Long Game &amp; Beyond the Meadow</summary>
+  <div class="section-body">
+
+    <h3>Long Game Variant</h3>
+    <ul>
+      <li>Play <strong>5 rounds</strong> instead of 4.</li>
+      <li><strong>No Royal Decree</strong> in Rounds 3 and 4 (only Rounds 1, 2, and 5 have it — wait, Round 5 is the final round so no Royal Decree there either).</li>
+    </ul>
+    <div class="warning">⚠️ In the Long Game, Royal Decree is skipped in Rounds 3–4, and also skipped in Round 5 (final round). So you only get Royal Decree in Rounds 1 and 2. Plan your economy carefully!</div>
+
+    <h3>Beyond the Meadow Variant</h3>
+    <p>Special hex tiles numbered <strong>#21–25</strong> with unique effects.</p>
+    <ul>
+      <li>Before the game, shuffle these special hexes and randomly add <strong>2–3</strong> into the hex tile stack.</li>
+      <li>These hexes have powerful or unusual effects that change the game dynamics.</li>
+      <li>Can be combined with any other variant.</li>
+    </ul>
+    <div class="tip">💡 Beyond the Meadow adds variety and surprises. Great for experienced players who want more unpredictability.</div>
+  </div>
+</details>
+
+</div><!-- /.container -->
+</body>
+</html>
