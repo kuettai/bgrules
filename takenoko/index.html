@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takenoko — Rules Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<a href="../index.html" class="back-link">← All Games</a>
+
+<div class="game-header">
+  <div class="cover-banner"><img src="cover.webp" alt="Takenoko box cover"></div>
+  <h1>🎋 Takenoko</h1>
+  <p class="meta">Antoine Bauza · Bombyx / Matagot · 2011 · 2–4 players · 45 min · Ages 8+</p>
+  <p class="meta">Tile Placement · Pattern Building · Action Points · Set Collection</p>
+  <div class="bgg-stats">
+    <div class="bgg-stat"><span class="bgg-value">7.2</span><span class="bgg-label">BGG Rating</span></div>
+    <div class="bgg-stat"><span class="bgg-value">1.95<small>/5</small></span><span class="bgg-label">Weight</span></div>
+    <div class="bgg-stat"><span class="bgg-value">~#280</span><span class="bgg-label">BGG Rank</span></div>
+    <div class="bgg-stat"><span class="bgg-value">2–3</span><span class="bgg-label">Best At</span></div>
+  </div>
+</div>
+
+<div class="expansion-nav">
+  <span class="expansion-nav-label">📦 Expansions</span>
+  <div class="expansion-pills">
+    <a href="expansions/chibis/index.html" class="expansion-pill">🐼 Chibis</a>
+  </div>
+</div>
+
+<!-- TURN OVERVIEW -->
+<details open>
+  <summary>🔄 Turn Overview</summary>
+  <div class="section-body">
+    <div class="flow-row">
+      <div class="flow-step highlight">🎲 Roll Weather</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">⚡ 2 Actions</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step">✅ Complete Objectives</div>
+    </div>
+    <p><strong>Step 1 — Weather</strong> (skip in round 1): Roll the weather die and apply the result.</p>
+    <p><strong>Step 2 — Actions:</strong> Choose 2 <em>different</em> actions (place chips on your board):</p>
+    <table>
+      <tr><th>Action</th><th>Effect</th></tr>
+      <tr><td>🌱 Plots</td><td>Draw 3 tiles, place 1, return 2 to top of pile</td></tr>
+      <tr><td>💧 Irrigation</td><td>Take 1 channel from reserve (place now or store)</td></tr>
+      <tr><td>👨‍🌾 Gardener</td><td>Move in a straight line → grows bamboo where he stops + adjacent same-color irrigated plots</td></tr>
+      <tr><td>🐼 Panda</td><td>Move in a straight line → eats 1 bamboo section where he stops</td></tr>
+      <tr><td>🎯 Objectives</td><td>Draw 1 objective card (max 5 in hand)</td></tr>
+    </table>
+    <p><strong>Step 3 — Complete Objectives:</strong> At any point during your turn, reveal completed objectives (doesn't cost an action). You may complete multiple per turn.</p>
+    <div class="tip"><strong>Order matters:</strong> You choose the order of your 2 actions. Stored irrigation channels can be placed any time during your turn for free.</div>
+  </div>
+</details>
+
+<!-- WEATHER DIE -->
+<details>
+  <summary>🎲 Weather Die</summary>
+  <div class="section-body">
+    <table>
+      <tr><th>Face</th><th>Effect</th></tr>
+      <tr><td>☀️ Sun</td><td>Gain a 3rd action (must be different from the other two)</td></tr>
+      <tr><td>🌧️ Rain</td><td>Place 1 bamboo section on any irrigated plot (max 4 high)</td></tr>
+      <tr><td>💨 Wind</td><td>May take 2 identical actions this turn</td></tr>
+      <tr><td>⛈️ Storm</td><td>Move the Panda to any plot; it eats 1 bamboo there</td></tr>
+      <tr><td>☁️ Clouds</td><td>Take 1 improvement chip from reserve (place or store). If none left, choose any other weather.</td></tr>
+      <tr><td>❓ Wild</td><td>Choose any weather condition above</td></tr>
+    </table>
+    <div class="warning"><strong>Round 1:</strong> Skip the weather die entirely — go straight to actions.</div>
+  </div>
+</details>
+
+<!-- PLOTS & IRRIGATION -->
+<details>
+  <summary>🌱 Plots &amp; Irrigation</summary>
+  <div class="section-body">
+    <h3>Placing Plots</h3>
+    <p>A new plot must be placed either:</p>
+    <ul>
+      <li>Adjacent to the central Pond tile, OR</li>
+      <li>Adjacent to at least 2 existing plots</li>
+    </ul>
+    <p>Each plot grows one bamboo shoot of its color (green, yellow, or pink).</p>
+
+    <h3>Irrigation Rules</h3>
+    <p>A plot is irrigated if any of these are true:</p>
+    <ul>
+      <li>Adjacent to the Pond tile (automatic)</li>
+      <li>Has at least one irrigation channel on its edge</li>
+      <li>Has the Watershed improvement</li>
+    </ul>
+    <p>Irrigation channels form a network starting from the Pond's corners. When a plot is irrigated for the first time, 1 bamboo section grows immediately.</p>
+
+    <div class="tip"><strong>Free placement:</strong> Stored irrigation channels can be placed at any time during your turn without spending an action.</div>
+    <div class="warning"><strong>Bamboo only grows on irrigated plots.</strong> The Gardener landing on a non-irrigated plot does nothing.</div>
+  </div>
+</details>
+
+<!-- GARDENER & PANDA -->
+<details>
+  <summary>👨‍🌾 Gardener &amp; 🐼 Panda Movement</summary>
+  <div class="section-body">
+    <h3>Movement Rules (both)</h3>
+    <ul>
+      <li>Move in a <strong>straight line</strong>, any number of plots</li>
+      <li>Cannot jump over empty spaces</li>
+      <li>Must move at least 1 plot</li>
+    </ul>
+
+    <h3>Gardener</h3>
+    <p>When the Gardener stops: grow 1 bamboo on that plot <strong>AND</strong> on all adjacent irrigated plots of the <strong>same color</strong>.</p>
+
+    <h3>Panda</h3>
+    <p>When the Panda stops: eat 1 bamboo section from that plot. Store it on your player board for Panda objectives.</p>
+
+    <div class="tip"><strong>Max bamboo height:</strong> 4 sections per plot. No growth beyond that.</div>
+  </div>
+</details>
+
+<!-- IMPROVEMENTS -->
+<details>
+  <summary>🔧 Improvements</summary>
+  <div class="section-body">
+    <p>Obtained via ☁️ Clouds weather. Place on a plot with <strong>no bamboo currently growing</strong> (just placed, not irrigated, or panda ate everything). One improvement per plot, permanent.</p>
+    <table>
+      <tr><th>Improvement</th><th>Effect</th></tr>
+      <tr><td>🚧 Enclosure</td><td>Panda cannot eat bamboo here (can still move through/stop)</td></tr>
+      <tr><td>🌿 Fertilizer</td><td>Grows 2 bamboo sections instead of 1 each time (still max 4)</td></tr>
+      <tr><td>💧 Watershed</td><td>Plot is automatically irrigated (cannot start irrigation networks)</td></tr>
+    </table>
+    <div class="warning"><strong>Built-in improvements</strong> (printed on tiles) count — that plot cannot receive another chip.</div>
+  </div>
+</details>
+
+<!-- OBJECTIVES -->
+<details>
+  <summary>🎯 Objective Cards</summary>
+  <div class="section-body">
+    <p>Three categories, each with its own draw pile:</p>
+
+    <h3>🟩 Plot Objectives</h3>
+    <p>Show a pattern of 3–4 adjacent plots of specific colors. All plots in the pattern <strong>must be irrigated</strong> to count.</p>
+
+    <h3>🟨 Gardener Objectives</h3>
+    <p>Require bamboo shoots at specific heights:</p>
+    <ul>
+      <li>A single 4-high shoot with a specific improvement (or no improvement)</li>
+      <li>Multiple 3-high shoots of a color (no improvement constraint)</li>
+    </ul>
+
+    <h3>🟪 Panda Objectives</h3>
+    <p>Require 2–3 bamboo sections of specific colors on your player board. Sections are returned to the reserve when completed.</p>
+
+    <div class="tip"><strong>Objectives are permanent:</strong> Once completed, they stay scored even if the board state changes later.</div>
+    <div class="warning"><strong>Hand limit:</strong> Max 5 objective cards. You must complete at least one before drawing again if at 5.</div>
+  </div>
+</details>
+
+<!-- SCORING & END GAME -->
+<details>
+  <summary>🏆 End Game &amp; Scoring</summary>
+  <div class="section-body">
+    <h3>Triggering the End</h3>
+    <table>
+      <tr><th>Players</th><th>Objectives to Trigger</th></tr>
+      <tr><td>2 players</td><td>9 completed objectives</td></tr>
+      <tr><td>3 players</td><td>8 completed objectives</td></tr>
+      <tr><td>4 players</td><td>7 completed objectives</td></tr>
+    </table>
+    <p>The triggering player takes the <strong>Emperor card</strong> (worth 2 points) and finishes their turn. All other players get <strong>one final turn</strong>.</p>
+
+    <h3>Scoring</h3>
+    <p>Total the points on all completed objective cards + Emperor card (if applicable).</p>
+    <p><strong>Tiebreaker:</strong> Most points from Panda objectives. Still tied? Shared victory.</p>
+
+    <div class="tip"><strong>You can complete multiple objectives on the turn you trigger the end.</strong></div>
+  </div>
+</details>
+
+<!-- SETUP -->
+<details>
+  <summary>⚙️ Setup</summary>
+  <div class="section-body">
+    <ol>
+      <li>Place the <strong>Pond tile</strong> in the center of the table</li>
+      <li>Place the <strong>Gardener</strong> and <strong>Panda</strong> on the Pond tile</li>
+      <li>Shuffle remaining plot tiles face-down as a draw pile</li>
+      <li>Place irrigation channels and improvements (sorted by type) as reserves</li>
+      <li>Set the <strong>Emperor card</strong> aside</li>
+      <li>Shuffle objective cards into 3 piles by category (Plot / Gardener / Panda)</li>
+      <li>Each player takes: 1 player board, 2 action chips, and 1 card from each objective pile</li>
+      <li><strong>Tallest player starts</strong> — play clockwise</li>
+    </ol>
+  </div>
+</details>
+
+<!-- COMPONENTS -->
+<details>
+  <summary>📦 Components</summary>
+  <div class="section-body">
+    <ul>
+      <li>28 hex plot tiles (11 green, 9 yellow, 7 pink + 1 Pond)</li>
+      <li>90 bamboo sections (36 green, 30 yellow, 24 pink)</li>
+      <li>20 irrigation channels</li>
+      <li>9 improvement chips (3 of each type)</li>
+      <li>46 objective cards (Plot / Gardener / Panda)</li>
+      <li>4 player boards + 8 action chips</li>
+      <li>1 weather die</li>
+      <li>1 Gardener figurine + 1 Panda figurine</li>
+      <li>1 Emperor card (2 VP)</li>
+    </ul>
+  </div>
+</details>
+
+<!-- FAQ -->
+<details>
+  <summary>❓ FAQ &amp; Gotchas</summary>
+  <div class="section-body">
+    <div class="warning"><strong>Gardener grows bamboo only on irrigated plots.</strong> If he stops on a non-irrigated plot, nothing happens there (but adjacent irrigated same-color plots still grow).</div>
+    <div class="warning"><strong>Panda on an empty plot:</strong> If there's no bamboo, the Panda eats nothing.</div>
+    <div class="warning"><strong>Enclosure doesn't block the Panda from stopping</strong> — it only prevents eating.</div>
+
+    <h3>Common Questions</h3>
+    <ul>
+      <li><strong>Can the Gardener/Panda stay on the Pond?</strong> — Yes, they start there. The Pond is not a colored plot so no bamboo grows.</li>
+      <li><strong>Can I place irrigation on the Pond's edges?</strong> — No. Irrigation starts from the Pond's corners, not its edges.</li>
+      <li><strong>Does Fertilizer work with Rain weather?</strong> — Yes! Rain on a Fertilizer plot adds 2 sections (up to max 4).</li>
+      <li><strong>Can I complete objectives on other players' turns?</strong> — No, only on your own turn.</li>
+      <li><strong>What if the plot draw pile runs out?</strong> — The Plot action is no longer available.</li>
+      <li><strong>Storm Panda placement:</strong> The Panda moves to ANY plot (not in a straight line) and eats 1 bamboo.</li>
+    </ul>
+  </div>
+</details>
+
+</div>
+</body>
+</html>
